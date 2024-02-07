@@ -19,9 +19,9 @@ import requests
 ```{python}
 #| label: load-dataset
 #| message: false
-df <- read.csv(https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-09-04/fastfood_calories.csv)
-str(df)
 
+df= pd.read_csv('data/fastfood_calories.csv')
+print(df.head(5))
 ```
 
 ### Dataset Description:

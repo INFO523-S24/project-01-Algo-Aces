@@ -162,7 +162,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#dataset" id="toc-dataset" class="nav-link active" data-scroll-target="#dataset">Dataset</a>
   <ul class="collapse">
-  <li><a href="#data-set-description" id="toc-data-set-description" class="nav-link" data-scroll-target="#data-set-description">Data set Description:</a></li>
+  <li><a href="#dataset-description" id="toc-dataset-description" class="nav-link" data-scroll-target="#dataset-description">Dataset Description:</a></li>
   <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a></li>
   <li><a href="#analysis-plan" id="toc-analysis-plan" class="nav-link" data-scroll-target="#analysis-plan">Analysis plan</a></li>
   </ul></li>
@@ -199,63 +199,57 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="dataset" class="level2">
 <h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
-<section id="data-set-description" class="level3">
-<h3 class="anchored" data-anchor-id="data-set-description">Data set Description:</h3>
-<section id="provenance" class="level4">
-<h4 class="anchored" data-anchor-id="provenance">Provenance:</h4>
-<p>The dataset’s source could be a variety of sources,including research institutions, open data repositories, or compiled data sets from various sources.</p>
-</section>
-<section id="dimensions" class="level4">
-<h4 class="anchored" data-anchor-id="dimensions">Dimensions:</h4>
-<p>The dataset likely contains multiple columns representing different attributes of fast food items, such as name, restaurant, category, calorie count, fat content, protein content, carbohydrate content, etc. The number of rows corresponds to the number of individual fast food items for each restaurant in the dataset.</p>
-</section>
+<div id="load-dataset" class="cell" data-message="false" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df<span class="op">=</span> pd.read_csv(<span class="st">'data/fastfood_calories.csv'</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(df.head(<span class="dv">5</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>   Unnamed: 0 restaurant                                       item  calories  \
+0           1  Mcdonalds           Artisan Grilled Chicken Sandwich       380   
+1           2  Mcdonalds             Single Bacon Smokehouse Burger       840   
+2           3  Mcdonalds             Double Bacon Smokehouse Burger      1130   
+3           4  Mcdonalds  Grilled Bacon Smokehouse Chicken Sandwich       750   
+4           5  Mcdonalds   Crispy Bacon Smokehouse Chicken Sandwich       920   
+
+   cal_fat  total_fat  sat_fat  trans_fat  cholesterol  sodium  total_carb  \
+0       60          7      2.0        0.0           95    1110          44   
+1      410         45     17.0        1.5          130    1580          62   
+2      600         67     27.0        3.0          220    1920          63   
+3      280         31     10.0        0.5          155    1940          62   
+4      410         45     12.0        0.5          120    1980          81   
+
+   fiber  sugar  protein  vit_a  vit_c  calcium  salad  
+0    3.0     11     37.0    4.0   20.0     20.0  Other  
+1    2.0     18     46.0    6.0   20.0     20.0  Other  
+2    3.0     18     70.0   10.0   20.0     50.0  Other  
+3    2.0     18     55.0    6.0   25.0     20.0  Other  
+4    4.0     18     46.0    6.0   20.0     20.0  Other  </code></pre>
+</div>
+</div>
+<section id="dataset-description" class="level3">
+<h3 class="anchored" data-anchor-id="dataset-description">Dataset Description:</h3>
+<p>Provenance: The dataset’s source could be a variety of sources, including research institutions, open data repositories, or compiled data sets from various sources.</p>
+<p>Dimensions: The dataset likely contains multiple columns representing different attributes of fast food items, such as name, restaurant, category, calorie count, fat content, protein content, carbohydrate content, etc. The number of rows corresponds to the number of individual fast food items for each restaurant in the dataset.</p>
 <section id="reasons-for-choosing-this-dataset" class="level4">
 <h4 class="anchored" data-anchor-id="reasons-for-choosing-this-dataset"><strong>Reasons for Choosing this Dataset:</strong></h4>
-</section>
-<section id="relevance" class="level4">
-<h4 class="anchored" data-anchor-id="relevance">Relevance:</h4>
-<p>Fast food consumption is a significant aspect of modern dietary habits, making this dataset relevant for understanding nutritional patterns and trends.</p>
-</section>
-<section id="health-awareness" class="level4">
-<h4 class="anchored" data-anchor-id="health-awareness">Health Awareness:</h4>
-<p>With growing concerns about obesity and related health issues, analyzing calorie content in fast food items can contribute to promoting health awareness and informed dietary choices.</p>
-</section>
-<section id="data-mining-opportunities" class="level4">
-<h4 class="anchored" data-anchor-id="data-mining-opportunities">Data Mining Opportunities:</h4>
-<p>The dataset provides ample opportunities for data mining tasks such as exploratory data analysis.</p>
+<p>Relevance: Fast food consumption is a significant aspect of modern dietary habits, making this dataset relevant for understanding nutritional patterns and trends.</p>
+<p>Health Awareness: With growing concerns about obesity and related health issues, analyzing calorie content in fast food items can contribute to promoting health awareness and informed dietary choices.</p>
+<p>Data Mining Opportunities: The dataset provides ample opportunities for data mining tasks such as exploratory data analysis.</p>
 </section>
 </section>
 <section id="questions" class="level3">
 <h3 class="anchored" data-anchor-id="questions">Questions</h3>
-<section id="question-1" class="level4">
-<h4 class="anchored" data-anchor-id="question-1">Question 1</h4>
-<ul>
-<li><p>How do different food item categories vary in nutritional value?</p></li>
-<li><p>In terms of mean, median, maximum, minimum, mode, and outliers, how do calorie intake levels differ between different restaurant visits</p></li>
-</ul>
-</section>
-<section id="question-2" class="level4">
-<h4 class="anchored" data-anchor-id="question-2">Question 2</h4>
-<ul>
-<li><p>How many calories would you eat normally on a trip to each restaurant?</p></li>
-<li><p>What is the distribution of protein-to-fat ratios and health metrics across various food item categories?</p></li>
-</ul>
-<p>A brief description of your dataset including its provenance, dimensions, etc. as well as the reason why you chose this dataset.</p>
-<p>Make sure to load the data and use inline code for some of this information.</p>
-</section>
+<p>Q1) How many calories would you eat normally on a trip to each restaurant? Q2) How do different food item categories vary in nutritional value?</p>
 </section>
 <section id="analysis-plan" class="level3">
 <h3 class="anchored" data-anchor-id="analysis-plan">Analysis plan</h3>
-<section id="question-1-1" class="level4">
-<h4 class="anchored" data-anchor-id="question-1-1">Question 1</h4>
-<p>The relevant columns for question 1 are and cellars. We will use the function groupby.describe( ) which includes mean, mode, median, min, and max, to construct a table with summary statistics for each restaurant item in terms of calories. We are going to use half violin plot for analysis.</p>
-</section>
-<section id="question-2-1" class="level4">
-<h4 class="anchored" data-anchor-id="question-2-1">Question 2</h4>
-<p>For question 2, the relevant columns will be , , protein, and item. To ensure when proteins and fats, we shall convert them from to calories. Using the protein-fat ratio, we can create a health metric that allows us to if a food item is healthy or harmful. We would like to visualise this using a half violent plot for better understanding of the metrics.</p>
+<p>Q1: The relevant columns for question 1 are and cellars. We will use the function <code>groupby.describe( )</code> which includes mean, mode, median, min, and max, to construct a table with summary statistics for each restaurant item in terms of calories.We are going to sum up all the calories for all the items in a restaurant and divide it with no of items gives avg calories gained by a person so we are going to use a half violin plot to showcase this result.</p>
+<p>Variables used: <code>restaurant</code>: Name of fast food joint or outlet item<code>: Food item being examined  total_fat</code>: The total amount of fat in the food item protein`: The amount of protein</p>
+<p>Q2:</p>
+<p>For question 2, the relevant columns will be protein, and item. To ensure when proteins and fats, we shall convert them from to calories. Using the protein-fat ratio, we can create a health metric that allows us to if a food item is healthy or harmful. We would like to visualise this using a half violent plot for better understanding of the metrics.</p>
+<p>Variables used:</p>
+<p>restaurant<code>: Name of fast food joint or outlet item</code>: Food item being examined total_fat<code>: The total amount of fat in the food item calories</code>: The number of calories in the food item cholesterol`: The amount of cholesterol in the food item</p>
 
 
-</section>
 </section>
 </section>
 
