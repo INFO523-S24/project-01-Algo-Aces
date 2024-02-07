@@ -28,11 +28,10 @@ df.head()
 ### Dataset Description:
 
 Provenance:
-The dataset's source could be a variety of sources, including research institutions,
-open data repositories, or compiled data sets from various sources.
+The dataset's sources are research institutions, open data repositories, or compiled data sets from various sources.
 
 Dimensions:
-The dataset likely contains multiple columns representing different attributes of fast food items, 
+The dataset contains multiple columns representing different attributes of fast food items, 
 such as name, restaurant, category, calorie count, fat content, protein content, 
 carbohydrate content, etc. The number of rows corresponds to the number of individual fast food items for each restaurant in the dataset.
 
@@ -49,29 +48,29 @@ The dataset provides ample opportunities for data mining tasks such as explorato
 
 ### Questions
 
-Q1) How many calories would you eat normally on a trip to each restaurant?
-Q2) How do different food item categories vary in nutritional value?
+Q1) How many calories are consumed on average per visit to each restaurant/outlet?
+Q2) How do different food item categories vary in Protein/Fat ratio and do they meet up to the standards of the health metric?
 
 
 ### Analysis plan
 
 Q1:
-The relevant columns for question 1 are and cellars. We will use the function `groupby.describe( )` which includes mean, mode, median, min, and max, to construct a table with summary statistics for each restaurant item in terms of calories.We are going to sum up all the calories for all the items in a restaurant and divide it with no of items gives avg calories gained by a person so we are going to use a half violin plot to showcase this result.
-
- Variables used:
-`restaurant`: Name of fast food joint or outlet
- item`: Food item being examined
- total_fat`: The total amount of fat in the food item
- protein`: The amount of protein
-
-Q2:
-
-For question 2, the relevant columns will be protein, and item. To ensure when proteins and fats, we shall convert them from to calories. Using the protein-fat ratio, we can create a health metric that allows us to if a food item is healthy or harmful. We would like to visualise this using a half violent plot for better understanding of the metrics.
+We will use the function `groupby.describe( )` which includes mean, mode, median, min, and max, to construct a table with summary statistics for each restaurant item in terms of calories.We are going to sum up all the calories for all the items in a restaurant and divide it with no of items gives avg calories gained by a person so we are going to use a half violin plot to showcase this result.
 
 Variables used:
 
-restaurant`: Name of fast food joint or outlet
-item`: Food item being examined
-total_fat`: The total amount of fat in the food item
-calories`: The number of calories in the food item
-cholesterol`: The amount of cholesterol in the food item
+`restaurant`: Name of fast food joint or outlet
+`item`: Food item being examined
+`total_fat`: The total amount of fat in the food item
+`calories`: The number of calories in the food item
+`cholesterol`: The amount of cholesterol in the food item
+
+
+Q2:
+For question 2, the relevant columns will be protein, and item. To ensure when proteins and fats, we shall convert them from to calories. Using the protein-fat ratio, we can create a health metric that allows us to if a food item is healthy or harmful. We would like to visualise this using a half violin plot for better understanding of the metrics.
+
+Variables used:
+`restaurant`: Name of fast food joint or outlet
+`item`: Food item being examined
+`total_fat`: The total amount of fat in the food item
+`protein`: The amount of protein
