@@ -26,6 +26,7 @@ df.head()
 ```
 
 ### Dataset Description:
+The "Fast Food Calories" dataset comprises nutritional information for various food items offered by eight distinct fast-food outlets. Each outlet's menu is detailed, encompassing items such as burgers, fries, beverages, and salads. The dataset includes essential nutritional metrics like calories, fat content, protein, and carbohydrates, allowing for in-depth analysis and comparison of the health implications of different menu choices. 
 
 Provenance:
 The dataset's source could be a variety of sources, including research institutions,
@@ -52,8 +53,8 @@ The dataset provides ample opportunities for data mining tasks such as explorato
 
 ### Questions
 
-Q1) How many calories would you eat normally on a trip to each restaurant?
-Q2) How do different food item categories vary in nutritional value?
+Q1) How many calories areconsumed on average per visit to each restaurant or outlet?
+Q2) How do different food item categories vary in protien-fat ratio and do they meet up to the standards of the health metric?
 
 
 ### Analysis plan
@@ -75,8 +76,7 @@ For question 2, the relevant columns will be protein, and item. To ensure when p
 
 Variables used:
 
-restaurant`: Name of fast food joint or outlet
-item`: Food item being examined
-total_fat`: The total amount of fat in the food item
-calories`: The number of calories in the food item
-cholesterol`: The amount of cholesterol in the food item
+`restaurant`: Name of fast food joint or outlet
+`item`: Food item being examined
+`total_fat`: The total amount of fat in the food item
+`protein`:The amount of protein
