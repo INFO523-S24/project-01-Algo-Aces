@@ -10,6 +10,8 @@ jupyter: python3
 #| label: load-pkgs
 #| message: false
 import numpy as np
+import pandas as pd
+import requests
 ```
 
 ## Dataset
@@ -17,16 +19,57 @@ import numpy as np
 ```{python}
 #| label: load-dataset
 #| message: false
+
 ```
+
+### Data set Description:
+
+#### Provenance:
+
+The dataset's source could be a variety of sources,including research institutions, open data repositories, or compiled data sets from various sources.
+
+#### Dimensions:
+
+The dataset likely contains multiple columns representing different attributes of fast food items, such as name, restaurant, category, calorie count, fat content, protein content, carbohydrate content, etc. The number of rows corresponds to the number of individual fast food items for each restaurant in the dataset.
+
+#### **Reasons for Choosing this Dataset:**
+
+#### Relevance:
+
+Fast food consumption is a significant aspect of modern dietary habits, making this dataset relevant for understanding nutritional patterns and trends.
+
+#### Health Awareness:
+
+With growing concerns about obesity and related health issues, analyzing calorie content in fast food items can contribute to promoting health awareness and informed dietary choices.
+
+#### Data Mining Opportunities:
+
+The dataset provides ample opportunities for data mining tasks such as exploratory data analysis.
+
+### Questions
+
+#### Question 1
+
+-   How do different food item categories vary in nutritional value?
+
+-   In terms of mean, median, maximum, minimum, mode, and outliers, how do calorie intake levels differ between different restaurant visits
+
+#### Question 2
+
+-   How many calories would you eat normally on a trip to each restaurant?
+
+-   What is the distribution of protein-to-fat ratios and health metrics across various food item categories?
 
 A brief description of your dataset including its provenance, dimensions, etc. as well as the reason why you chose this dataset.
 
 Make sure to load the data and use inline code for some of this information.
 
-## Questions
+### Analysis plan
 
-The two questions you want to answer.
+#### Question 1
 
-## Analysis plan
+The relevant columns for question 1 are and cellars. We will use the function groupby.describe( ) which includes mean, mode, median, min, and max, to construct a table with summary statistics for each restaurant item in terms of calories. We are going to use half violin plot for analysis.
 
--   A plan for answering each of the questions including the variables involved, variables to be created (if any), external data to be merged in (if any).
+#### Question 2
+
+For question 2, the relevant columns will be , , protein, and item. To ensure when proteins and fats, we shall convert them from to calories. Using the protein-fat ratio, we can create a health metric that allows us to if a food item is healthy or harmful. We would like to visualise this using a half violent plot for better understanding of the metrics.
