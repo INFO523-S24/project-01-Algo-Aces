@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.4.540">
+<meta name="generator" content="quarto-1.4.549">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -57,7 +57,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/quarto-nav/quarto-nav.js"></script>
 <script src="site_libs/quarto-nav/headroom.min.js"></script>
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-search/autocomplete.umd.js"></script>
@@ -100,6 +100,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+
+<script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 
 
 </head>
@@ -162,7 +165,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
   <ul>
   <li><a href="#dataset" id="toc-dataset" class="nav-link active" data-scroll-target="#dataset">Dataset</a>
   <ul class="collapse">
-  <li><a href="#data-set-description" id="toc-data-set-description" class="nav-link" data-scroll-target="#data-set-description">Data set Description:</a></li>
+  <li><a href="#dataset-description" id="toc-dataset-description" class="nav-link" data-scroll-target="#dataset-description">Dataset Description:</a></li>
   <li><a href="#questions" id="toc-questions" class="nav-link" data-scroll-target="#questions">Questions</a></li>
   <li><a href="#analysis-plan" id="toc-analysis-plan" class="nav-link" data-scroll-target="#analysis-plan">Analysis plan</a></li>
   </ul></li>
@@ -199,63 +202,174 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="dataset" class="level2">
 <h2 class="anchored" data-anchor-id="dataset">Dataset</h2>
-<section id="data-set-description" class="level3">
-<h3 class="anchored" data-anchor-id="data-set-description">Data set Description:</h3>
-<section id="provenance" class="level4">
-<h4 class="anchored" data-anchor-id="provenance">Provenance:</h4>
-<p>The dataset’s source could be a variety of sources,including research institutions, open data repositories, or compiled data sets from various sources.</p>
-</section>
-<section id="dimensions" class="level4">
-<h4 class="anchored" data-anchor-id="dimensions">Dimensions:</h4>
-<p>The dataset likely contains multiple columns representing different attributes of fast food items, such as name, restaurant, category, calorie count, fat content, protein content, carbohydrate content, etc. The number of rows corresponds to the number of individual fast food items for each restaurant in the dataset.</p>
-</section>
+<div id="cell-load-dataset" class="cell" data-message="false" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>df <span class="op">=</span> pd.read_csv(<span class="st">"https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-09-04/fastfood_calories.csv"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="load-dataset" class="cell-output cell-output-display" data-execution_count="4">
+<div>
+
+
+<table class="dataframe table table-sm table-striped small" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">Unnamed: 0</th>
+<th data-quarto-table-cell-role="th">restaurant</th>
+<th data-quarto-table-cell-role="th">item</th>
+<th data-quarto-table-cell-role="th">calories</th>
+<th data-quarto-table-cell-role="th">cal_fat</th>
+<th data-quarto-table-cell-role="th">total_fat</th>
+<th data-quarto-table-cell-role="th">sat_fat</th>
+<th data-quarto-table-cell-role="th">trans_fat</th>
+<th data-quarto-table-cell-role="th">cholesterol</th>
+<th data-quarto-table-cell-role="th">sodium</th>
+<th data-quarto-table-cell-role="th">total_carb</th>
+<th data-quarto-table-cell-role="th">fiber</th>
+<th data-quarto-table-cell-role="th">sugar</th>
+<th data-quarto-table-cell-role="th">protein</th>
+<th data-quarto-table-cell-role="th">vit_a</th>
+<th data-quarto-table-cell-role="th">vit_c</th>
+<th data-quarto-table-cell-role="th">calcium</th>
+<th data-quarto-table-cell-role="th">salad</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>1</td>
+<td>Mcdonalds</td>
+<td>Artisan Grilled Chicken Sandwich</td>
+<td>380</td>
+<td>60</td>
+<td>7</td>
+<td>2.0</td>
+<td>0.0</td>
+<td>95</td>
+<td>1110</td>
+<td>44</td>
+<td>3.0</td>
+<td>11</td>
+<td>37.0</td>
+<td>4.0</td>
+<td>20.0</td>
+<td>20.0</td>
+<td>Other</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>2</td>
+<td>Mcdonalds</td>
+<td>Single Bacon Smokehouse Burger</td>
+<td>840</td>
+<td>410</td>
+<td>45</td>
+<td>17.0</td>
+<td>1.5</td>
+<td>130</td>
+<td>1580</td>
+<td>62</td>
+<td>2.0</td>
+<td>18</td>
+<td>46.0</td>
+<td>6.0</td>
+<td>20.0</td>
+<td>20.0</td>
+<td>Other</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>3</td>
+<td>Mcdonalds</td>
+<td>Double Bacon Smokehouse Burger</td>
+<td>1130</td>
+<td>600</td>
+<td>67</td>
+<td>27.0</td>
+<td>3.0</td>
+<td>220</td>
+<td>1920</td>
+<td>63</td>
+<td>3.0</td>
+<td>18</td>
+<td>70.0</td>
+<td>10.0</td>
+<td>20.0</td>
+<td>50.0</td>
+<td>Other</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>4</td>
+<td>Mcdonalds</td>
+<td>Grilled Bacon Smokehouse Chicken Sandwich</td>
+<td>750</td>
+<td>280</td>
+<td>31</td>
+<td>10.0</td>
+<td>0.5</td>
+<td>155</td>
+<td>1940</td>
+<td>62</td>
+<td>2.0</td>
+<td>18</td>
+<td>55.0</td>
+<td>6.0</td>
+<td>25.0</td>
+<td>20.0</td>
+<td>Other</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>5</td>
+<td>Mcdonalds</td>
+<td>Crispy Bacon Smokehouse Chicken Sandwich</td>
+<td>920</td>
+<td>410</td>
+<td>45</td>
+<td>12.0</td>
+<td>0.5</td>
+<td>120</td>
+<td>1980</td>
+<td>81</td>
+<td>4.0</td>
+<td>18</td>
+<td>46.0</td>
+<td>6.0</td>
+<td>20.0</td>
+<td>20.0</td>
+<td>Other</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div>
+<section id="dataset-description" class="level3">
+<h3 class="anchored" data-anchor-id="dataset-description">Dataset Description:</h3>
+<p>Provenance: The dataset’s source could be a variety of sources, including research institutions, open data repositories, or compiled data sets from various sources.</p>
+<p>Dimensions: The dataset likely contains multiple columns representing different attributes of fast food items, such as name, restaurant, category, calorie count, fat content, protein content, carbohydrate content, etc. The number of rows corresponds to the number of individual fast food items for each restaurant in the dataset.</p>
 <section id="reasons-for-choosing-this-dataset" class="level4">
 <h4 class="anchored" data-anchor-id="reasons-for-choosing-this-dataset"><strong>Reasons for Choosing this Dataset:</strong></h4>
-</section>
-<section id="relevance" class="level4">
-<h4 class="anchored" data-anchor-id="relevance">Relevance:</h4>
-<p>Fast food consumption is a significant aspect of modern dietary habits, making this dataset relevant for understanding nutritional patterns and trends.</p>
-</section>
-<section id="health-awareness" class="level4">
-<h4 class="anchored" data-anchor-id="health-awareness">Health Awareness:</h4>
-<p>With growing concerns about obesity and related health issues, analyzing calorie content in fast food items can contribute to promoting health awareness and informed dietary choices.</p>
-</section>
-<section id="data-mining-opportunities" class="level4">
-<h4 class="anchored" data-anchor-id="data-mining-opportunities">Data Mining Opportunities:</h4>
-<p>The dataset provides ample opportunities for data mining tasks such as exploratory data analysis.</p>
+<p>Relevance: Fast food consumption is a significant aspect of modern dietary habits, making this dataset relevant for understanding nutritional patterns and trends.</p>
+<p>Health Awareness: With growing concerns about obesity and related health issues, analyzing calorie content in fast food items can contribute to promoting health awareness and informed dietary choices.</p>
+<p>Data Mining Opportunities: The dataset provides ample opportunities for data mining tasks such as exploratory data analysis.</p>
 </section>
 </section>
 <section id="questions" class="level3">
 <h3 class="anchored" data-anchor-id="questions">Questions</h3>
-<section id="question-1" class="level4">
-<h4 class="anchored" data-anchor-id="question-1">Question 1</h4>
-<ul>
-<li><p>How do different food item categories vary in nutritional value?</p></li>
-<li><p>In terms of mean, median, maximum, minimum, mode, and outliers, how do calorie intake levels differ between different restaurant visits</p></li>
-</ul>
-</section>
-<section id="question-2" class="level4">
-<h4 class="anchored" data-anchor-id="question-2">Question 2</h4>
-<ul>
-<li><p>How many calories would you eat normally on a trip to each restaurant?</p></li>
-<li><p>What is the distribution of protein-to-fat ratios and health metrics across various food item categories?</p></li>
-</ul>
-<p>A brief description of your dataset including its provenance, dimensions, etc. as well as the reason why you chose this dataset.</p>
-<p>Make sure to load the data and use inline code for some of this information.</p>
-</section>
+<p>Q1) How many calories would you eat normally on a trip to each restaurant? Q2) How do different food item categories vary in nutritional value?</p>
 </section>
 <section id="analysis-plan" class="level3">
 <h3 class="anchored" data-anchor-id="analysis-plan">Analysis plan</h3>
-<section id="question-1-1" class="level4">
-<h4 class="anchored" data-anchor-id="question-1-1">Question 1</h4>
-<p>The relevant columns for question 1 are and cellars. We will use the function groupby.describe( ) which includes mean, mode, median, min, and max, to construct a table with summary statistics for each restaurant item in terms of calories. We are going to use half violin plot for analysis.</p>
-</section>
-<section id="question-2-1" class="level4">
-<h4 class="anchored" data-anchor-id="question-2-1">Question 2</h4>
-<p>For question 2, the relevant columns will be , , protein, and item. To ensure when proteins and fats, we shall convert them from to calories. Using the protein-fat ratio, we can create a health metric that allows us to if a food item is healthy or harmful. We would like to visualise this using a half violent plot for better understanding of the metrics.</p>
+<p>Q1: The relevant columns for question 1 are and cellars. We will use the function <code>groupby.describe( )</code> which includes mean, mode, median, min, and max, to construct a table with summary statistics for each restaurant item in terms of calories.We are going to sum up all the calories for all the items in a restaurant and divide it with no of items gives avg calories gained by a person so we are going to use a half violin plot to showcase this result.</p>
+<p>Variables used: <code>restaurant</code>: Name of fast food joint or outlet item<code>: Food item being examined  total_fat</code>: The total amount of fat in the food item protein`: The amount of protein</p>
+<p>Q2:</p>
+<p>For question 2, the relevant columns will be protein, and item. To ensure when proteins and fats, we shall convert them from to calories. Using the protein-fat ratio, we can create a health metric that allows us to if a food item is healthy or harmful. We would like to visualise this using a half violent plot for better understanding of the metrics.</p>
+<p>Variables used:</p>
+<p>restaurant<code>: Name of fast food joint or outlet item</code>: Food item being examined total_fat<code>: The total amount of fat in the food item calories</code>: The number of calories in the food item cholesterol`: The amount of cholesterol in the food item</p>
 
 
-</section>
 </section>
 </section>
 
@@ -421,7 +535,12 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       if (window.Quarto?.typesetMath) {
         window.Quarto.typesetMath(note);
       }
-      return note.innerHTML;
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
     }
   }
   for (var i=0; i<xrefs.length; i++) {
