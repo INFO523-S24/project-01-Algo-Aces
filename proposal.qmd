@@ -60,8 +60,30 @@ The dataset provides ample opportunities for data mining tasks such as explorato
 
 #### Question 1
 
-The relevant columns for question 1 are and cellars. We will use the function groupby.describe( ) which includes mean, mode, median, min, and max, to construct a table with summary statistics for each restaurant item in terms of calories. We are going to use half violin plot for analysis.
+The relevant columns for question 1 are and cellars. We will use the function `groupby.describe( )` which includes mean, mode, median, min, and max, to construct a table with summary statistics for each restaurant item in terms of calories. We are going to use half violin plot for analysis.
+
+#### Variables used:
+
+`restaurant`: Name of fast food joint or outlet
+
+`item`: Food item being examined
+
+`total_fat`: The total amount of fat in the food item
+
+`protein`: The amount of protein
 
 #### Question 2
 
 For question 2, the relevant columns will be protein, and item. To ensure when proteins and fats, we shall convert them from to calories. Using the protein-fat ratio, we can create a health metric that allows us to if a food item is healthy or harmful. We would like to visualise this using a half violent plot for better understanding of the metrics.
+
+#### Variables used:
+
+`restaurant`: Name of fast food joint or outlet
+
+`item`: Food item being examined
+
+`total_fat`: The total amount of fat in the food item
+
+`calories`: The number of calories in the food item
+
+`cholesterol`: The amount of cholesterol in the food item
