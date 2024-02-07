@@ -1,5 +1,5 @@
 ---
-title: "Proposal title"
+title: "Algo Aces Project Proposal"
 subtitle: "Proposal"
 format: html
 editor: visual
