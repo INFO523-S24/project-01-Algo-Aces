@@ -347,26 +347,28 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="dataset-description" class="level3">
 <h3 class="anchored" data-anchor-id="dataset-description">Dataset Description:</h3>
+<p>The “Fast Food Calories” dataset comprises nutritional information for various food items offered by eight distinct fast-food outlets. Each outlet’s menu is detailed, encompassing items such as burgers, fries, beverages, and salads. The dataset includes essential nutritional metrics like calories, fat content, protein, and carbohydrates, allowing for in-depth analysis and comparison of the health implications of different menu choices .</p>
 <p>Provenance: The dataset’s source could be a variety of sources, including research institutions, open data repositories, or compiled data sets from various sources.</p>
 <p>Dimensions: The dataset likely contains multiple columns representing different attributes of fast food items, such as name, restaurant, category, calorie count, fat content, protein content, carbohydrate content, etc. The number of rows corresponds to the number of individual fast food items for each restaurant in the dataset.</p>
 <section id="why-this-dataset" class="level4">
 <h4 class="anchored" data-anchor-id="why-this-dataset"><strong>Why this Dataset:</strong></h4>
 <p>Relevance: Fast food consumption is a significant aspect of modern dietary habits, making this dataset relevant for understanding nutritional patterns and trends.</p>
-<p>Health Awareness: With growing concerns about obesity and related health issues, analyzing calorie content in fast food items can contribute to promoting health awareness and informed dietary choices.</p>
+<p>-&gt; It makes it possible to see how the allocation of calorie counts within various fast food item categories is visualized, providing information about the items’ primary tendencies and variability. -&gt; Making educated dietary decisions is further facilitated by the ability to quickly identify variations in calorie distributions by comparing half violin plots across various fast-food categories. -&gt; Comparing different fast-food establishments or menu items can be rendered simpler with this sort of visualization portrayal of calorie data, which helps consumers make healthier decisions. -&gt; Researchers and policymakers can contribute to efforts to promote healthy eating habits in society and increase public knowledge of nutritional value by utilizing fast food calorie data in data visualization initiatives.</p>
 <p>Data Mining Opportunities: The dataset provides ample opportunities for data mining tasks such as exploratory data analysis.</p>
 </section>
 </section>
 <section id="questions" class="level3">
 <h3 class="anchored" data-anchor-id="questions">Questions</h3>
-<p>Q1) How many calories would you eat normally on a trip to each restaurant? Q2) How do different food item categories vary in nutritional value?</p>
+<p>Q1) How many calories areconsumed on average per visit to each restaurant or outlet? Q2) How do different food item categories vary in protien-fat ratio and do they meet up to the standards of the health metric?</p>
 </section>
 <section id="analysis-plan" class="level3">
 <h3 class="anchored" data-anchor-id="analysis-plan">Analysis plan</h3>
-<p>Q1: The relevant columns for question 1 are and cellars. We will use the function <code>groupby.describe( )</code> which includes mean, mode, median, min, and max, to construct a table with summary statistics for each restaurant item in terms of calories.We are going to sum up all the calories for all the items in a restaurant and divide it with no of items gives avg calories gained by a person so we are going to use a half violin plot to showcase this result.</p>
-<p>Variables used: <code>restaurant</code>: Name of fast food joint or outlet item<code>: Food item being examined  total_fat</code>: The total amount of fat in the food item protein`: The amount of protein</p>
-<p>Q2: For question 2, the relevant columns will be protein, and item. To ensure when proteins and fats, we shall convert them from to calories. Using the protein-fat ratio, we can create a health metric that allows us to if a food item is healthy or harmful. We would like to visualise this using a half violin plot for better understanding of the metrics.</p>
+<p>Q1: We will use the function <code>groupby.describe( )</code> which includes mean, mode, median, min, and max, to construct a table with summary statistics for each restaurant item in terms of calories.We are going to sum up all the calories for all the items in a restaurant and divide it with no of items gives avg calories gained by a person so we are going to use a half violin plot to showcase this result.</p>
 <p>Variables used:</p>
 <p><code>restaurant</code>: Name of fast food joint or outlet <code>item</code>: Food item being examined <code>total_fat</code>: The total amount of fat in the food item <code>calories</code>: The number of calories in the food item <code>cholesterol</code>: The amount of cholesterol in the food item</p>
+<p>Q2: For question 2, the relevant columns will be protein, and item. To ensure when proteins and fats, we shall convert them from to calories. Using the protein-fat ratio, we can create a health metric that allows us to if a food item is healthy or harmful. We would like to visualise this using a half violin plot for better understanding of the metrics.</p>
+<p>Variables used:</p>
+<p><code>restaurant</code>: Name of fast food joint or outlet <code>item</code>: Food item being examined <code>total_fat</code>: The total amount of fat in the food item <code>protein</code>:The amount of protein</p>
 
 
 </section>
