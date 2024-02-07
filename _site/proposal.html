@@ -347,6 +347,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 <section id="dataset-description" class="level3">
 <h3 class="anchored" data-anchor-id="dataset-description">Dataset Description:</h3>
+<p>The “Fast Food Calories” dataset comprises nutritional information for various food items offered by eight distinct fast-food outlets. Each outlet’s menu is detailed, encompassing items such as burgers, fries, beverages, and salads. The dataset includes essential nutritional metrics like calories, fat content, protein, and carbohydrates, allowing for in-depth analysis and comparison of the health implications of different menu choices.</p>
 <p>Provenance: The dataset’s source could be a variety of sources, including research institutions, open data repositories, or compiled data sets from various sources.</p>
 <p>Dimensions: The dataset likely contains multiple columns representing different attributes of fast food items, such as name, restaurant, category, calorie count, fat content, protein content, carbohydrate content, etc. The number of rows corresponds to the number of individual fast food items for each restaurant in the dataset.</p>
 <section id="why-this-dataset" class="level4">
@@ -358,7 +359,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="questions" class="level3">
 <h3 class="anchored" data-anchor-id="questions">Questions</h3>
-<p>Q1) How many calories would you eat normally on a trip to each restaurant? Q2) How do different food item categories vary in nutritional value?</p>
+<p>Q1) How many calories areconsumed on average per visit to each restaurant or outlet? Q2) How do different food item categories vary in protien-fat ratio and do they meet up to the standards of the health metric?</p>
 </section>
 <section id="analysis-plan" class="level3">
 <h3 class="anchored" data-anchor-id="analysis-plan">Analysis plan</h3>
@@ -367,7 +368,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><code>restaurant</code>: Name of fast food joint or outlet <code>item</code>: Food item being examined <code>total_fat</code>: The total amount of fat in the food item <code>calories</code>: The number of calories in the food item <code>cholesterol</code>: The amount of cholesterol in the food item</p>
 <p>Q2: For question 2, the relevant columns will be protein, and item. To ensure when proteins and fats, we shall convert them from to calories. Using the protein-fat ratio, we can create a health metric that allows us to if a food item is healthy or harmful. We would like to visualise this using a half violin plot for better understanding of the metrics.</p>
 <p>Variables used:</p>
-<p>restaurant<code>: Name of fast food joint or outlet item</code>: Food item being examined total_fat<code>: The total amount of fat in the food item calories</code>: The number of calories in the food item cholesterol`: The amount of cholesterol in the food item</p>
+<p><code>restaurant</code>: Name of fast food joint or outlet <code>item</code>: Food item being examined <code>total_fat</code>: The total amount of fat in the food item <code>protein</code>:The amount of protein</p>
 
 
 </section>
