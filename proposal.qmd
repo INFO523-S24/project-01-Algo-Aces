@@ -22,11 +22,11 @@ import requests
 
 ```
 
-### Data set Description:
+### Dataset Description:
 
 #### Provenance:
 
-The dataset's source could be a variety of sources,including research institutions, open data repositories, or compiled data sets from various sources.
+The dataset's source could be a variety of sources, including research institutions, open data repositories, or compiled data sets from various sources.
 
 #### Dimensions:
 
@@ -52,17 +52,9 @@ The dataset provides ample opportunities for data mining tasks such as explorato
 
 -   How do different food item categories vary in nutritional value?
 
--   In terms of mean, median, maximum, minimum, mode, and outliers, how do calorie intake levels differ between different restaurant visits
-
 #### Question 2
 
 -   How many calories would you eat normally on a trip to each restaurant?
-
--   What is the distribution of protein-to-fat ratios and health metrics across various food item categories?
-
-A brief description of your dataset including its provenance, dimensions, etc. as well as the reason why you chose this dataset.
-
-Make sure to load the data and use inline code for some of this information.
 
 ### Analysis plan
 
@@ -72,4 +64,4 @@ The relevant columns for question 1 are and cellars. We will use the function gr
 
 #### Question 2
 
-For question 2, the relevant columns will be , , protein, and item. To ensure when proteins and fats, we shall convert them from to calories. Using the protein-fat ratio, we can create a health metric that allows us to if a food item is healthy or harmful. We would like to visualise this using a half violent plot for better understanding of the metrics.
+For question 2, the relevant columns will be protein, and item. To ensure when proteins and fats, we shall convert them from to calories. Using the protein-fat ratio, we can create a health metric that allows us to if a food item is healthy or harmful. We would like to visualise this using a half violent plot for better understanding of the metrics.
