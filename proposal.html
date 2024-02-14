@@ -365,10 +365,25 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="analysis-plan">Analysis plan</h3>
 <p>Q1: We will use the function <code>groupby.describe( )</code> which includes mean, mode, median, min, and max, to construct a table with summary statistics for each restaurant item in terms of calories. We are going to sum up all the calories for all the items in a restaurant and divide it with no of items gives avg calories gained by a person so we are going to use a half violin plot to showcase this result.</p>
 <p>Variables used: All the variables with the exception of the restaurant variable are numerical. <code>restaurant</code>: Name of fast food joint or outlet (categorical) <code>item</code>: Food item being examined <code>total_fat</code>: The total amount of fat in the food item <code>calories</code>: The number of calories in the food item <code>cholesterol</code>: The amount of cholesterol in the food item</p>
-<p>Output of the analysis: - <code>Summary table</code>: consists of the following- - <code>Mean</code> - <code>Median</code> - <code>Max</code> - <code>Min</code> - <code>Mode</code> - <code>Half violin plot</code></p>
+<p>Output of the analysis: -</p>
+<p><code>Summary table</code>:</p>
+<p>Consists of the following:</p>
+<p><code>Mean</code></p>
+<p><code>Median</code></p>
+<p><code>Max</code></p>
+<p><code>Min</code></p>
+<p><code>Mode</code></p>
+<p><code>Half violin plot</code></p>
 <p>Q2: For question 2, the relevant columns will be protein, and item. To ensure when proteins and fats, we shall convert them from to calories. Using the protein-fat ratio, we can create a health metric that allows us to if a food item is healthy or harmful. We would like to visualise this using a half violin plot for better understanding of the metrics.</p>
-<p>Variables used: All the variables with the exception of the restaurant variable are numerical. <code>restaurant</code>: Name of fast food joint or outlet (categorical) <code>item</code>: Food item being examined <code>total_fat</code>: The total amount of fat in the food item <code>protein</code>:The amount of protein</p>
-<p>Output of the analysis: - New columns - <code>Item_cat</code>: Defining the category of the particular food item - <code>Protein_fat_ratio</code>: ratio of the amount of proteins to fats present in the food item - <code>Health_metric</code>: Standards set to check whether the food item considered has a well-balanced nutritional value.</p>
+<p>Variables used: All the variables with the exception of the restaurant variable are numerical.</p>
+<p><code>restaurant</code>: Name of fast food joint or outlet (categorical)</p>
+<p><code>item</code>: Food item being examined</p>
+<p><code>total_fat</code>: The total amount of fat in the food item <code>protein</code>:The amount of protein</p>
+<p>Output of the analysis:</p>
+<p>New columns -</p>
+<p><code>Item_cat</code>: Defining the category of the particular food item</p>
+<p><code>Protein_fat_ratio</code>: ratio of the amount of proteins to fats present in the food item .</p>
+<p><code>Health_metric</code>: Standards set to check whether the food item considered has a well-balanced nutritional value.</p>
 
 
 </section>
