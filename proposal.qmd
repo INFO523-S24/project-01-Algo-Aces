@@ -29,7 +29,7 @@ df.head()
 
 The "Fast Food Calories" dataset comprises nutritional information for various food items offered by eight distinct fast-food outlets. Each outlet's menu is detailed, encompassing items such as burgers, fries, beverages, and salads. The dataset includes essential nutritional metrics like calories, fat content, protein, and carbohydrates, allowing for in-depth analysis and comparison of the health implications of different menu choices .
 
-Provenance: The dataset's source could be a variety of sources, including research institutions, open data repositories, or compiled data sets from various sources.
+Provenance: The dataset's sources include: research institutions, open data repositories(tidytuesday) and compiled data sets from various sources.
 
 Dimensions: The dataset likely contains multiple columns representing different attributes of fast food items, such as name, restaurant, category, calorie count, fat content, protein content, carbohydrate content, etc. The number of rows corresponds to the number of individual fast food items for each restaurant in the dataset.
 
