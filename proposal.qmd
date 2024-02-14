@@ -57,7 +57,7 @@ Q2) How do different food item categories vary in protien-fat ratio and do they 
 ### Analysis plan
 
 Q1:
-We will use the function `groupby.describe( )` which includes mean, mode, median, min, and max, to construct a table with summary statistics for each restaurant item in terms of calories.We are going to sum up all the calories for all the items in a restaurant and divide it with no of items gives avg calories gained by a person so we are going to use a half violin plot to showcase this result.
+We will use the function `groupby.describe( )` which includes mean, mode, median, min, and max, to construct a table with summary statistics for each restaurant item in terms of calories. We are going to sum up all the calories for all the items in a restaurant and divide it with no of items gives avg calories gained by a person so we are going to use a half violin plot to showcase this result.
 
 Variables used:
 
