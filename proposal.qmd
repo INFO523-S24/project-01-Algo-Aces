@@ -53,7 +53,7 @@ The dataset provides ample opportunities for data mining tasks such as explorato
 
 ### Questions
 
-Q1) How many calories areconsumed on average per visit to each restaurant or outlet?
+Q1) How many calories are consumed on average per visit to each restaurant or outlet?
 Q2) How do different food item categories vary in protien-fat ratio and do they meet up to the standards of the health metric?
 
 
