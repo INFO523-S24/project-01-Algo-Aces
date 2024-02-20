@@ -89,3 +89,46 @@ New columns -
 
 `Health_metric`: Standards set to check whether the food item considered has a well-balanced nutritional value.
 
+## Timeline for Project Proposal
+
+**Week of 05 Feb:**
+
+Prepare the proposal for peer review. Participate in peer reviews for other groups.
+
+**Week of 12 Feb:**
+
+Revise the proposal based on feedback from both peers and the instructor.
+
+Make necessary adjustments to improve the proposal's quality and clarity.:
+
+**Week of February 19:**
+
+Assign duties to team members.
+
+Explore data on your own and start working on preliminary visualization ideas for comparison.
+
+Start formatting the slide deck for the presentation.
+
+**Week of February 26** -
+
+Complete the plot visualizations.
+
+Completing the write-ups
+
+Finalizing the interpretations
+
+Beginning the presentation
+
+**Week of March 6th**:
+
+The presentation draft
+
+Tidying up the website
+
+⁠Completing the presentation draft ⁠
+
+Reviewing the internal project
+
+**March 10th:**
+
+Project is completed and the project is submitted.
