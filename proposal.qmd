@@ -69,7 +69,7 @@ Consists of the following:
 
 `Half violin plot`
 
-Q2: For question 2, the relevant columns will be protein, and item. To ensure when proteins and fats, we shall convert them from to calories. Using the protein-fat ratio, we can create a health metric that allows us to if a food item is healthy or harmful. We would like to visualise this using a half violin plot for better understanding of the metrics.
+Q2: For question 2, the relevant columns will be protein, and item. To ensure when proteins and fats, we shall convert them from to calories. Using the protein-fat ratio, we can create a health metric that allows us to if a food item is healthy or harmful. We would like to visualize this using a half violin plot for better understanding of the metrics. A new table consisting only of the different food items from the dataset `'fastfood_calories.csv'` is created. The table will be named `‘categorized_items’.` We will then perform a left-join operation on this table with the original DataFrame using the `pd.merge()` function by specifying it as a left-join with the function `how = “left”` .
 
 Variables used: All the variables with the exception of the restaurant variable are numerical.
 
