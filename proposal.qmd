@@ -19,7 +19,7 @@ import requests
 ```{python}
 #| label: load-dataset
 #| message: false
-df = pd.read_csv("https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-09-04/fastfood_calories.csv")
+df = pd.read_csv("data/fastfood_calories.csv")
 df.head()
 
 
