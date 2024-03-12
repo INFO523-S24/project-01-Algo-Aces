@@ -2,7 +2,9 @@
 title: "Project title"
 subtitle: "INFO 523 - Project 1"
 author: "Team name"
-format: html
+format:
+  html: 
+    code-fold: true
 editor: visual
 jupyter: python3
 ---
@@ -34,6 +36,10 @@ Analysis
 Part 1
 
 ```{python}
+#| message: false
+#| warning: false
+
+
 import numpy as np
 import pandas as pd
 import seaborn as sns
@@ -71,12 +77,14 @@ print(summary_table)
 ```
 
 ```{python}
+#| message: false
+#| warning: false
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Load the dataset into a DataFrame
-calories_df = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-09-04/fastfood_calories.csv')
+calories_df = pd.read_csv('data/fastfood_calories.csv')
 
 # Calculate median calories for each restaurant
 median_calories = calories_df.groupby('restaurant')['calories'].median().reset_index()
@@ -127,12 +135,15 @@ Analysis
 Part 1
 
 ```{python}
+#| message: false
+#| warning: false
+#| label: figure3
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 
 # Load the dataset into a DataFrame
-calories_df = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-09-04/fastfood_calories.csv')
+calories_df = pd.read_csv('data/fastfood_calories.csv')
 
 # Define calorie-per-gram values for fat and protein
 calories_per_gram_fat = 9  # Fat provides 9 calories per gram
@@ -217,6 +228,16 @@ plt.tight_layout()
 plt.show()
 
 
+
+
+```
+
+The code chunk below represents the summary statistics of the food categories of the data set using the protein fat ratio
+
+```{python}
+#| message: false
+#| warning: false
+#| label: summary_stats
 
 
 ```
