@@ -33,8 +33,6 @@ Analysis
 
 Part 1
 
-
-
 ```{python}
 import numpy as np
 import pandas as pd
@@ -122,13 +120,11 @@ Introduction
 
 The goal of this question is to examine the wide range of protein-fat ratios seen in different dietary categories and determine how well they correspond with recognized health measures. Examining the variations in protein-fat proportions among different types of food items is crucial for evaluating their nutritional value. By analyzing these ratios and comparing them with health benchmarks, we can identify food categories that meet recommended nutritional criteria and those that may benefit from adjustments to optimize health benefits. Through this analysis, we aim to gain a deeper understanding of the complex interplay between dietary composition and its impact on health outcomes.
 
-
 Approach
 
 Analysis
 
 Part 1
-
 
 ```{python}
 import pandas as pd
@@ -178,5 +174,49 @@ plt.yticks(fontsize=12)
 plt.grid(True, linestyle='--', alpha=0.7)
 plt.tight_layout()
 plt.show()
+
+```
+
+The table below represents the health metric for the fast food restaurants based on the protein fat ratio.
+
+```{python}
+#| message: false
+#| warning: false
+#| label: health_metric_plot
+
+
+import matplotlib.pyplot as plt
+
+# Define data
+protein_fat_ratios = [0.35, 0.26, 0.49, 0.26, 0.33, 0.26, 0.47, 0.26]
+restaurants = ['Arbys', 'Burger King', 'Chick Fil-A', 'Dairy Queen', 'McDonalds', 'Sonic', 'Subway', 'Taco Bell']
+
+# Create the plot
+plt.figure(figsize=(10, 6))
+
+# Plot points for protein fat ratios for each restaurant
+for i, restaurant in enumerate(restaurants):
+    plt.scatter([protein_fat_ratios[i]], [restaurant], label=restaurant, marker='o')
+
+# Shade the regions
+plt.axvspan(0.25, 0.40, color='lightcoral', alpha=0.5, label='Needs Improvement')
+plt.axvspan(0.40, 0.50, color='lightgreen', alpha=0.5, label='Healthy')
+
+# Labels and legend
+plt.xlabel('Protein Fat Ratio')
+plt.ylabel('Restaurants')
+plt.title('Protein Fat Ratio of Restaurants')
+
+# Customize y-axis labels
+plt.yticks(restaurants)
+
+# Show plot
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.tight_layout()
+#plt.legend()
+plt.show()
+
+
+
 
 ```
