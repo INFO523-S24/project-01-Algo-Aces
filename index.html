@@ -6,7 +6,7 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
-<meta name="author" content="Team name">
+<meta name="author" content="Algo Aces">
 
 <title>Project Title - Project title</title>
 <style>
@@ -165,6 +165,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
    
   <ul>
   <li><a href="#abstract" id="toc-abstract" class="nav-link active" data-scroll-target="#abstract">Abstract</a></li>
+  <li><a href="#exploratory-data-analysis" id="toc-exploratory-data-analysis" class="nav-link" data-scroll-target="#exploratory-data-analysis">Exploratory Data Analysis</a></li>
   </ul>
 </nav>
     </div>
@@ -184,7 +185,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <div>
     <div class="quarto-title-meta-heading">Author</div>
     <div class="quarto-title-meta-contents">
-             <p>Team name </p>
+             <p>Algo Aces </p>
           </div>
   </div>
     
@@ -197,21 +198,34 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </header>
 
 
-<section id="abstract" class="level2">
-<h2 class="anchored" data-anchor-id="abstract">Abstract</h2>
-<p>Introduction</p>
-<p>Introducing the dataset</p>
+<section id="abstract" class="level3">
+<h3 class="anchored" data-anchor-id="abstract">Abstract</h3>
+<section id="introduction" class="level4">
+<h4 class="anchored" data-anchor-id="introduction">Introduction</h4>
+</section>
+<section id="introducing-the-dataset" class="level4">
+<h4 class="anchored" data-anchor-id="introducing-the-dataset">Introducing the dataset</h4>
 <p>The “Fast Food Calories” dataset comprises nutritional information for various food items offered by eight distinct fast-food outlets. Each outlet’s menu is detailed, encompassing items such as burgers, fries, beverages, and salads. The dataset’s sources include: research institutions, open data repositories(tidytuesday) and compiled data sets from various sources. The dataset contains multiple columns representing different attributes of fast-food items, such as name, restaurant, category, calorie count, fat content, protein content, carbohydrate content, etc. The number of rows corresponds to the number of individual fast-food items for each restaurant in the dataset.</p>
-<p>EDA</p>
-<p>Question 1</p>
+</section>
+</section>
+<section id="exploratory-data-analysis" class="level3">
+<h3 class="anchored" data-anchor-id="exploratory-data-analysis">Exploratory Data Analysis</h3>
+<section id="question-1" class="level4">
+<h4 class="anchored" data-anchor-id="question-1">Question 1</h4>
 <p>What is the average calorie consumption per visit at each fast food restaurant or outlet?</p>
 <p>Introduction</p>
 <p>This question allows us to grasp the average calorie intake per visit across different fast food restaurants, providing insights into their nutritional profiles. By analysing the typical calorie intake, we can learn a lot about the energy content of foods served in popular fast food outlets. Examining average calorie consumption each visit acts as a realistic nutritional guide for people who are conscious of their meal choices, providing helpful information in choosing healthier eating habits. It can also be an important resource for government bodies concerned with public health, giving information that can be used to develop policies aiming at increasing nutritional standards and fighting diet-related health concerns in communities.</p>
-<p>Approach</p>
+</section>
+<section id="approach" class="level4">
+<h4 class="anchored" data-anchor-id="approach">Approach</h4>
 <p>We’ll use the “groupby.describe()” method to create a summary table with contains statistical information like mean, mode, median, minimum, and maximum calorie content for each item in every restaurant. The variables used for this analysis are Restaurant, Item, Total Fat, and Calories. To calculate the average calories consumed per person, we will add the total calories from all items in each restaurant and divide by the number of items. This data is visualised using a half-violin plot, which will provide a clear picture of the distribution of average calorie intake per person across different eateries, allowing for a better understanding and interpretation of nutrition patterns.</p>
-<p>Analysis</p>
-<p>Part 1</p>
-<div id="0a9d3058" class="cell" data-message="false" data-execution_count="1">
+</section>
+<section id="analysis" class="level4">
+<h4 class="anchored" data-anchor-id="analysis">Analysis</h4>
+</section>
+<section id="part-1" class="level4">
+<h4 class="anchored" data-anchor-id="part-1">Part 1</h4>
+<div id="baf1e9b8" class="cell" data-message="false" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -258,7 +272,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-stdout">
 <pre><code>Summary Table:</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="46">
+<div class="cell-output cell-output-display" data-execution_count="1">
 <div>
 
 
@@ -382,7 +396,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="8366256a" class="cell" data-message="false" data-execution_count="2">
+<div id="8e1f5d1e" class="cell" data-message="false" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -431,13 +445,23 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>Question 2</p>
+</section>
+<section id="question-2" class="level4">
+<h4 class="anchored" data-anchor-id="question-2">Question 2</h4>
 <p>How do different food item categories vary in protien-fat ratio and do they meet up to the standards of the health metric?</p>
-<p>Introduction</p>
+</section>
+<section id="introduction-1" class="level4">
+<h4 class="anchored" data-anchor-id="introduction-1">Introduction</h4>
 <p>The goal of this question is to examine the wide range of protein-fat ratios seen in different dietary categories and determine how well they correspond with recognized health measures. Examining the variations in protein-fat proportions among different types of food items is crucial for evaluating their nutritional value. By analyzing these ratios and comparing them with health benchmarks, we can identify food categories that meet recommended nutritional criteria and those that may benefit from adjustments to optimize health benefits. Through this analysis, we aim to gain a deeper understanding of the complex interplay between dietary composition and its impact on health outcomes.</p>
-<p>Approach</p>
-<p>Analysis</p>
-<p>Part 1</p>
+</section>
+<section id="approach-1" class="level4">
+<h4 class="anchored" data-anchor-id="approach-1">Approach</h4>
+</section>
+<section id="analysis-1" class="level4">
+<h4 class="anchored" data-anchor-id="analysis-1">Analysis</h4>
+</section>
+<section id="part-1-1" class="level4">
+<h4 class="anchored" data-anchor-id="part-1-1">Part 1</h4>
 <div id="cell-figure3" class="cell" data-message="false" data-execution_count="3">
 <details class="code-fold">
 <summary>Code</summary>
@@ -585,7 +609,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb6-39"><a href="#cb6-39" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb6-40"><a href="#cb6-40" aria-hidden="true" tabindex="-1"></a>summary_stats.describe( )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
-<div id="summary_stats" class="cell-output cell-output-display" data-execution_count="50">
+<div id="summary_stats" class="cell-output cell-output-display" data-execution_count="5">
 <div>
 
 
@@ -711,6 +735,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
