@@ -52,7 +52,7 @@ df = pd.read_csv("data/fastfood_calories.csv")
 median_calories_per_visit = df.groupby('restaurant')['calories'].median()
 
 # Print summary statistics
-summary_table = df.groupby('restaurant')['calories'].describe()
+summary_table = df.groupby('restaurant')['calories']
 
 # Sort the DataFrame by restaurant names
 df_sorted = df.sort_values(by='restaurant')
@@ -72,7 +72,7 @@ plt.legend(title='Median Calories', handles=violin.collections, labels=[f"{int(m
 plt.show()
 
 print("Summary Table:")
-print(summary_table)
+summary_table.describe( )
 
 ```
 
@@ -239,5 +239,45 @@ The code chunk below represents the summary statistics of the food categories of
 #| warning: false
 #| label: summary_stats
 
+import pandas as pd
+import numpy as np
+calories_df = pd.read_csv("data/fastfood_calories.csv")
+#below lies the dictionary for the categorisation of the food items into groups
+categories = {
+    'Burgers': ['Burger', 'Cheeseburger', 'McNuggets', 'Quarter Pounder'],
+    'Chicken Sandwiches': ['Chicken Sandwich', 'Grilled Chicken', 'Crispy Chicken'],
+    'Salads': ['Salad'],
+    'Chicken Nuggets/Tenders': ['Chicken McNuggets', 'Chicken Tenders'],
+    'Hot Dogs': ['Hot Dog'],
+    'Subway Items': ['Subway'],
+    'Tacos/Burritos': ['Taco', 'Burrito', 'Nachos']
+}
+##the function below was used to group the food groups based on the presence of certain words in the dictionary
+def categorize_item(item):
+    for category, keywords in categories.items():
+        if any(keyword.lower() in item.lower() for keyword in keywords):
+            return category
+    return 'Other'
+  
+calories_df['categorized_food_items'] = calories_df['item'].apply(categorize_item)
+###creating the protein fat ratio for the columns in the dataset
+# Define calorie-per-gram values for fat and protein
+calories_per_gram_fat = 9  # Fat provides 9 calories per gram
+calories_per_gram_protein = 4  # Protein provides 4 calories per gram
+
+# Calculate calories from protein and fat
+calories_df['cal_protein'] = calories_df['protein'] * calories_per_gram_protein
+calories_df['cal_fat'] = calories_df['total_fat'] * calories_per_gram_fat
+
+# Calculate total calories
+calories_df['total_calories'] = calories_df['cal_protein'] + calories_df['cal_fat']
+
+# Calculate Protein_fat_ratio
+calories_df['Protein_fat_ratio'] = calories_df['cal_protein'] / calories_df['total_calories']
+
+
+summary_stats = calories_df.groupby('categorized_food_items')['Protein_fat_ratio']
+
+summary_stats.describe( )
 
 ```
