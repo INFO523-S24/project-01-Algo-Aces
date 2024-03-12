@@ -1,9 +1,9 @@
 ---
-title: "Project title"
+title: "Fast Food Calories"
 subtitle: "INFO 523 - Spring 2023 - Project 1"
-author: "Author names"
+author: "Team Algo Aces- Sai Navya Reddy Busireddy, Gowtham Theeda, Tanya Evita George, Valerie Okine, Monica Tejaswi Kommareddy"
 title-slide-attributes:
-  data-background-image: images/watercolour_sys02_img34_teacup-ocean.jpg
+  data-background-image: images/coverimg1.jpg
   data-background-size: stretch
   data-background-opacity: "0.7"
   data-slide-number: none
@@ -20,6 +20,8 @@ execute:
 ```{python}
 #| label: load-packages
 #| include: false
+
+!pip install statsmodels
 
 # Load packages here
 import pandas as pd
