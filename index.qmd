@@ -1,7 +1,7 @@
 ---
 title: "Project title"
 subtitle: "INFO 523 - Project 1"
-author: "Team name"
+author: "Algo Aces"
 format: html
 editor: visual
 jupyter: python3
@@ -10,3 +10,180 @@ jupyter: python3
 ## Abstract
 
 Add project abstract here.
+
+```{python}
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load the dataset
+calories_df = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-09-04/fastfood_calories.csv')
+
+# Group by restaurant and calculate summary statistics
+restaurant_stats = calories_df.groupby('restaurant')['calories'].describe()
+
+# Calculate average calories consumed per visit
+restaurant_stats['average_calories'] = calories_df.groupby('restaurant')['calories'].mean()
+
+# Set custom color palette
+colors = sns.color_palette("husl", len(calories_df['restaurant'].unique()))
+
+# Set the figure size
+plt.figure(figsize=(12, 8))
+# Create a half violin plot with x and y axes swapped
+sns.violinplot(x='calories', y='restaurant', data=calories_df, inner='quartile', linewidth=1.5, cut=0.5, palette=colors, scale='width')
+
+# Add median values to the plot
+for i, val in enumerate(restaurant_stats['50%']):
+    plt.text(val, i, f'{val:.0f}', ha='right', va='center', color='black', fontsize=10)
+
+# Add title and labels
+plt.title('Half Violin Plot of Calories by Restaurant', fontsize=16)
+plt.xlabel('Calories', fontsize=14)
+plt.ylabel('Restaurant', fontsize=14)
+
+# Set x-axis limit
+plt.xlim(0, 2500)
+
+# Customize y-axis labels
+plt.yticks(fontsize=12)
+
+# Show the plot
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.tight_layout()
+plt.show()
+```
+
+
+```{python}
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load the dataset into a DataFrame
+calories_df = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-09-04/fastfood_calories.csv')
+
+# Calculate median calories for each restaurant
+median_calories = calories_df.groupby('restaurant')['calories'].median().reset_index()
+
+# Set the color palette
+colors = sns.color_palette("husl", len(median_calories['restaurant']))
+
+# Set the figure size
+plt.figure(figsize=(10, 6))
+
+# Create the line plot with inverted triangles and white background
+for i, restaurant in enumerate(median_calories['restaurant']):
+    plt.plot(restaurant, median_calories.loc[i, 'calories'], marker='v', markersize=12, color=colors[i], label=restaurant)
+    plt.text(restaurant, median_calories.loc[i, 'calories'] - 15, f"{median_calories.loc[i, 'calories']:.0f}", ha='center', fontsize=10, color='black')
+
+# Add title and labels
+plt.title('Median Calories by Restaurant', fontsize=16)
+plt.xlabel('Restaurant', fontsize=14)
+plt.ylabel('Median Calories per visit', fontsize=14)
+
+# Rotate x-axis labels for better readability (optional)
+plt.xticks(rotation=45, ha='right')
+
+# Set y-axis limit
+plt.ylim(350, 650)
+
+# Set y-axis ticks with step 50
+plt.yticks(range(350, 651, 50))
+
+# Remove gridlines
+plt.grid(False)
+
+# Add legend
+plt.legend(fontsize=10)
+
+# Set background color to white
+plt.gca().patch.set_facecolor('white')
+
+# Show the plot
+plt.tight_layout()
+plt.show()
+# Create the line plot with inverted triangles and white background
+for i, restaurant in enumerate(median_calories['restaurant']):
+    plt.plot(restaurant, median_calories.loc[i, 'calories'], marker='v', markersize=12, color=colors[i], label=restaurant)
+    plt.text(restaurant, median_calories.loc[i, 'calories'] - 15, f"{median_calories.loc[i, 'calories']:.0f}", ha='center', fontsize=10, color='black')
+
+# Add title and labels
+plt.title('Median Calories by Restaurant', fontsize=16)
+plt.xlabel('Restaurant', fontsize=14)
+plt.ylabel('Median Calories per visit', fontsize=14)
+# Rotate x-axis labels for better readability (optional)
+plt.xticks(rotation=45, ha='right')
+
+# Set y-axis limit
+plt.ylim(350, 650)
+
+# Set y-axis ticks with step 50
+plt.yticks(range(350, 651, 50))
+
+# Remove gridlines
+plt.grid(False)
+
+# Add legend
+plt.legend(fontsize=10)
+
+# Set background color to white
+plt.gca().patch.set_facecolor('white')
+
+# Show the plot
+plt.tight_layout()
+plt.show()
+```
+
+
+```{python}
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load the dataset into a DataFrame
+calories_df = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-09-04/fastfood_calories.csv')
+
+# Define calorie-per-gram values for fat and protein
+calories_per_gram_fat = 9  # Fat provides 9 calories per gram
+calories_per_gram_protein = 4  # Protein provides 4 calories per gram
+
+# Calculate calories from protein and fat
+calories_df['cal_protein'] = calories_df['protein'] * calories_per_gram_protein
+calories_df['cal_fat'] = calories_df['total_fat'] * calories_per_gram_fat
+
+# Calculate total calories
+calories_df['total_calories'] = calories_df['cal_protein'] + calories_df['cal_fat']
+
+# Calculate Protein_fat_ratio
+calories_df['Protein_fat_ratio'] = calories_df['cal_protein'] / calories_df['total_calories']
+
+# Calculate median Protein_fat_ratio for each restaurant
+median_protein_fat_ratio = calories_df.groupby('restaurant')['Protein_fat_ratio'].median().reset_index()
+
+# Set custom color palette
+colors = sns.color_palette("pastel")
+
+# Create a half violin plot to visualize the median Protein_fat_ratio for each restaurant
+plt.figure(figsize=(12, 8))
+sns.violinplot(x='Protein_fat_ratio', y='restaurant', data=calories_df, inner='quartile', linewidth=1.5, cut=0, split=True, palette=colors)
+
+# Add title and labels
+plt.title('Protein-Fat Ratio by Restaurant', fontsize=16)
+plt.xlabel('Protein-Fat Ratio', fontsize=14)
+plt.ylabel('Restaurant', fontsize=14)
+
+# Add annotations for median values
+for i in range(len(median_protein_fat_ratio)):
+    plt.text(median_protein_fat_ratio['Protein_fat_ratio'][i], i, f"{median_protein_fat_ratio['Protein_fat_ratio'][i]:.2f}", fontsize=10, va='center', ha='right')
+
+# Customize y-axis labels
+plt.yticks(fontsize=12)
+
+# Show the plot
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.tight_layout()
+plt.show()
+
+```
+
