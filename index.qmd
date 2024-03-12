@@ -11,3 +11,46 @@ jupyter: python3
 
 Add project abstract here.
  
+
+```{python}
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+# Load the dataset
+calories_df = pd.read_csv('https://raw.githubusercontent.com/rfordatascience/tidytuesday/master/data/2018/2018-09-04/fastfood_calories.csv')
+
+# Group by restaurant and calculate summary statistics
+restaurant_stats = calories_df.groupby('restaurant')['calories'].describe()
+
+# Calculate average calories consumed per visit
+restaurant_stats['average_calories'] = calories_df.groupby('restaurant')['calories'].mean()
+
+# Set custom color palette
+colors = sns.color_palette("husl", len(calories_df['restaurant'].unique()))
+
+# Set the figure size
+plt.figure(figsize=(12, 8))
+# Create a half violin plot with x and y axes swapped
+sns.violinplot(x='calories', y='restaurant', data=calories_df, inner='quartile', linewidth=1.5, cut=0.5, palette=colors, scale='width')
+
+# Add median values to the plot
+for i, val in enumerate(restaurant_stats['50%']):
+    plt.text(val, i, f'{val:.0f}', ha='right', va='center', color='black', fontsize=10)
+
+# Add title and labels
+plt.title('Half Violin Plot of Calories by Restaurant', fontsize=16)
+plt.xlabel('Calories', fontsize=14)
+plt.ylabel('Restaurant', fontsize=14)
+
+# Set x-axis limit
+plt.xlim(0, 2500)
+
+# Customize y-axis labels
+plt.yticks(fontsize=12)
+
+# Show the plot
+plt.grid(True, linestyle='--', alpha=0.7)
+plt.tight_layout()
+plt.show()
+```
