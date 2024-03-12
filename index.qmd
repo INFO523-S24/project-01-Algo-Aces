@@ -1,7 +1,7 @@
 ---
 title: "Project title"
 subtitle: "INFO 523 - Project 1"
-author: "Team name"
+author: "Algo Aces"
 format:
   html: 
     code-fold: true
@@ -9,17 +9,17 @@ editor: visual
 jupyter: python3
 ---
 
-## Abstract
+### Abstract
 
-Introduction
+#### Introduction
 
-Introducing the dataset
+#### Introducing the dataset
 
 The “Fast Food Calories” dataset comprises nutritional information for various food items offered by eight distinct fast-food outlets. Each outlet’s menu is detailed, encompassing items such as burgers, fries, beverages, and salads. The dataset’s sources include: research institutions, open data repositories(tidytuesday) and compiled data sets from various sources. The dataset contains multiple columns representing different attributes of fast-food items, such as name, restaurant, category, calorie count, fat content, protein content, carbohydrate content, etc. The number of rows corresponds to the number of individual fast-food items for each restaurant in the dataset.
 
-EDA
+### Exploratory Data Analysis
 
-Question 1
+#### Question 1
 
 What is the average calorie consumption per visit at each fast food restaurant or outlet?
 
@@ -27,13 +27,13 @@ Introduction
 
 This question allows us to grasp the average calorie intake per visit across different fast food restaurants, providing insights into their nutritional profiles. By analysing the typical calorie intake, we can learn a lot about the energy content of foods served in popular fast food outlets. Examining average calorie consumption each visit acts as a realistic nutritional guide for people who are conscious of their meal choices, providing helpful information in choosing healthier eating habits. It can also be an important resource for government bodies concerned with public health, giving information that can be used to develop policies aiming at increasing nutritional standards and fighting diet-related health concerns in communities.
 
-Approach
+#### Approach
 
 We'll use the "groupby.describe()" method to create a summary table with contains statistical information like mean, mode, median, minimum, and maximum calorie content for each item in every restaurant. The variables used for this analysis are Restaurant, Item, Total Fat, and Calories. To calculate the average calories consumed per person, we will add the total calories from all items in each restaurant and divide by the number of items. This data is visualised using a half-violin plot, which will provide a clear picture of the distribution of average calorie intake per person across different eateries, allowing for a better understanding and interpretation of nutrition patterns.
 
-Analysis
+#### Analysis
 
-Part 1
+#### Part 1
 
 ```{python}
 #| message: false
@@ -120,19 +120,19 @@ plt.grid(False)
 
 ```
 
-Question 2
+#### Question 2
 
 How do different food item categories vary in protien-fat ratio and do they meet up to the standards of the health metric?
 
-Introduction
+#### Introduction
 
 The goal of this question is to examine the wide range of protein-fat ratios seen in different dietary categories and determine how well they correspond with recognized health measures. Examining the variations in protein-fat proportions among different types of food items is crucial for evaluating their nutritional value. By analyzing these ratios and comparing them with health benchmarks, we can identify food categories that meet recommended nutritional criteria and those that may benefit from adjustments to optimize health benefits. Through this analysis, we aim to gain a deeper understanding of the complex interplay between dietary composition and its impact on health outcomes.
 
-Approach
+#### Approach
 
-Analysis
+#### Analysis
 
-Part 1
+#### Part 1
 
 ```{python}
 #| message: false
