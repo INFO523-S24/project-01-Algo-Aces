@@ -65,6 +65,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <script src="site_libs/quarto-search/fuse.min.js"></script>
 <script src="site_libs/quarto-search/quarto-search.js"></script>
 <meta name="quarto:offset" content="./">
+<link href="./images/AlgoAces-logo.webp" rel="icon">
 <script src="site_libs/quarto-html/quarto.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -115,6 +116,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
+    <a href="./index.html" class="navbar-brand navbar-brand-logo">
+    <img src="./images\AlgoAces-logo.webp" alt="" class="navbar-logo">
+    </a>
     <a class="navbar-brand" href="./index.html">
     <span class="navbar-title">Project Title</span>
     </a>
@@ -212,20 +216,20 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <h3 class="anchored" data-anchor-id="exploratory-data-analysis">Exploratory Data Analysis</h3>
 <section id="question-1" class="level4">
 <h4 class="anchored" data-anchor-id="question-1">Question 1</h4>
-<p>What is the average calorie consumption per visit at each fast food restaurant or outlet?</p>
+<p>What is the median calorie consumption per visit at each fast food restaurant or outlet?</p>
 <p>Introduction</p>
-<p>This question allows us to grasp the average calorie intake per visit across different fast food restaurants, providing insights into their nutritional profiles. By analysing the typical calorie intake, we can learn a lot about the energy content of foods served in popular fast food outlets. Examining average calorie consumption each visit acts as a realistic nutritional guide for people who are conscious of their meal choices, providing helpful information in choosing healthier eating habits. It can also be an important resource for government bodies concerned with public health, giving information that can be used to develop policies aiming at increasing nutritional standards and fighting diet-related health concerns in communities.</p>
+<p>This question allows us to grasp the median calorie intake per visit across different fast food restaurants, providing insights into their nutritional profiles. By analysing the typical calorie intake, we can learn a lot about the energy content of foods served in popular fast food outlets. Examining median calorie consumption each visit acts as a realistic nutritional guide for people who are conscious of their meal choices, providing helpful information in choosing healthier eating habits. It can also be an important resource for government bodies concerned with public health, giving information that can be used to develop policies aiming at increasing nutritional standards and fighting diet-related health concerns in communities.</p>
 </section>
 <section id="approach" class="level4">
 <h4 class="anchored" data-anchor-id="approach">Approach</h4>
-<p>We’ll use the “groupby.describe()” method to create a summary table with contains statistical information like mean, mode, median, minimum, and maximum calorie content for each item in every restaurant. The variables used for this analysis are Restaurant, Item, Total Fat, and Calories. To calculate the average calories consumed per person, we will add the total calories from all items in each restaurant and divide by the number of items. This data is visualised using a half-violin plot, which will provide a clear picture of the distribution of average calorie intake per person across different eateries, allowing for a better understanding and interpretation of nutrition patterns.</p>
+<p>We’ll use the “groupby.describe()” method to create a summary table with contains statistical information like mean, mode, median, minimum, and maximum calorie content for each item in every restaurant. The variables used for this analysis are Restaurant, Item, Total Fat, and Calories. We computed the median calories consumed per person due to the distributional nature of the data. This data is visualised using a violin plot, which will provide a clear picture of the distribution of median calorie intake per person across different eateries, allowing for a better understanding and interpretation of nutrition patterns. The line plot with triangle marker is used to visualise the median calories of each restuarent. The median which is used as a central tendency metric is best visualised using the line plot. We also have derived summary statistics atble for each restuarent.</p>
 </section>
 <section id="analysis" class="level4">
 <h4 class="anchored" data-anchor-id="analysis">Analysis</h4>
 </section>
 <section id="part-1" class="level4">
 <h4 class="anchored" data-anchor-id="part-1">Part 1</h4>
-<div id="baf1e9b8" class="cell" data-message="false" data-execution_count="1">
+<div id="e20dd25c" class="cell" data-message="false" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -245,7 +249,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a><span class="co"># Sort the DataFrame by restaurant names</span></span>
 <span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a>df_sorted <span class="op">=</span> df.sort_values(by<span class="op">=</span><span class="st">'restaurant'</span>)</span>
 <span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot half violin plot</span></span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Plotting violin plot</span></span>
 <span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>plt.figure(figsize<span class="op">=</span>(<span class="dv">12</span>, <span class="dv">8</span>))</span>
 <span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a>violin <span class="op">=</span> sns.violinplot(x<span class="op">=</span><span class="st">'calories'</span>, y<span class="op">=</span><span class="st">'restaurant'</span>, data<span class="op">=</span>df_sorted, inner<span class="op">=</span><span class="st">'quartile'</span>, cut<span class="op">=</span><span class="dv">0</span>, palette<span class="op">=</span><span class="st">'husl'</span>)</span>
 <span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Distribution of Calories per Visit by Restaurant'</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
@@ -396,7 +400,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<div id="8e1f5d1e" class="cell" data-message="false" data-execution_count="2">
+<p>Part 2</p>
+<div id="e31c3379" class="cell" data-message="false" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -421,9 +426,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    plt.text(restaurant, median_calories.loc[i, <span class="st">'calories'</span>] <span class="op">-</span> <span class="dv">15</span>, <span class="ss">f"</span><span class="sc">{</span>median_calories<span class="sc">.</span>loc[i, <span class="st">'calories'</span>]<span class="sc">:.0f}</span><span class="ss">"</span>, ha<span class="op">=</span><span class="st">'center'</span>, fontsize<span class="op">=</span><span class="dv">10</span>, color<span class="op">=</span><span class="st">'black'</span>)</span>
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Add title and labels</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Average Calories per visit to a Restaurant'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Calories per visit to a Restaurant'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
 <span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Restaurant'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Average Calories per visit'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Calories per visit'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
 <span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Rotate x-axis labels for better readability (optional)</span></span>
 <span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>, ha<span class="op">=</span><span class="st">'right'</span>)</span>
@@ -446,6 +451,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </section>
+<section id="discussion" class="level4">
+<h4 class="anchored" data-anchor-id="discussion">Discussion</h4>
+<p>The distribution of calorie consumption per visit across various fast-food restaurants is illustrated by the visualization of a violin plot. The width of each “violin” in the violin plot, corresponds to the density of observations at various calorie levels. Each violin’s quartiles provide information on the data’s central tendency and distribution, aiding in the understanding of the variability in calorie counts among restaurants. A summary table is printed, which includes information such as mean, standard deviation, minimum, 25th percentile, median (50th percentile), 75th percentile, and maximum calorie counts. This mix of graphic and numerical statistics offers a thorough picture of calorie consumption patterns across different fast-food businesses. The second visualization presents a line plot featuring inverted triangle marker, where each restaurant median calorie is symbolized by a marker. Horizontally positioned according to restaurant names and vertically aligned based on the average calorie count per visit, the plot enables us to discern that certain restaurants boast notably higher median calorie counts. This highlights the substantial variation in the nutritional profiles of meals served at different fast-food establishments. Some restaurants exhibit consistent calorie counts across visits, while others demonstrate greater variability, indicative of a broader selection of food options with varying calorie content.</p>
+</section>
 <section id="question-2" class="level4">
 <h4 class="anchored" data-anchor-id="question-2">Question 2</h4>
 <p>How do different food item categories vary in protien-fat ratio and do they meet up to the standards of the health metric?</p>
@@ -456,6 +465,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="approach-1" class="level4">
 <h4 class="anchored" data-anchor-id="approach-1">Approach</h4>
+<p>For question 2, we’ll use the “protein” and “item” variables. To standardize the proteins and fats we’ll convert them to calories. By employing the protein-fat ratio, we established a health metric to classify food items as healthy or unhealthy. We have used a half-violin plot to visualize these findings. The half-violin plot is particularly helpful since it demonstrates the distribution of our data while simultaneously indicating its symmetry. The shape of the plot gives us insight into the density of our data, which helps us comprehend the distribution of our health metrics. We have also used a scatter plot to visualize the median protein-fat ratio of each restaurant. Using these Scatter plots provides a clear visual representation of the data points’ dispersion. The summary statistics table for the menu items offered by each of these eateries was found based on the protein-fat ratio.</p>
 </section>
 <section id="analysis-1" class="level4">
 <h4 class="anchored" data-anchor-id="analysis-1">Analysis</h4>
@@ -553,7 +563,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Show plot</span></span>
 <span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
 <span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a><span class="co">#plt.legend()</span></span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
 <span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
@@ -733,6 +743,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
+<p>###Discussion The half-violin plot depicts how the protein-fat ratio varies between fast-food outlets. The numbers near quartile lines inside the violin plots show each restaurant’s median protein-fat ratio. The quartile line range provides information on the nutritional markup of their menu items. Some restaurants have narrower distributions, indicating less protein-fat ratios in those quartile distributions, while others have larger distributions, implying more protein-fat ratio in the quartile ranges. The line plot with a circle marker depicts the protein-fat ratios of several fast-food establishments. Each point in the diagram represents a restaurant, with the placement determined by the protein-fat ratio. The shaded regions determine the threshold for classifying restaurants as either “Needs Improvement” or “Healthy” based on their protein-fat ratios. Restaurants classified in the “Needs Improvement” category suggest that their menu options are characterized by a higher proportion of fat relative to protein. Conversely, eateries placed in the “Healthy” category indicate a more favorable protein-to-fat ratio, implying a healthier balance in their menu offerings. For the summary statistics table the food items were categorized into 8 main categories, burgers, chicken nuggets/ tenders, chicken sandwiches, hotdogs, other, salads, subway items, and tacos and burritos, these categorizations were done using a dictionary. A dictionary was created for each food category containing certain words distinct to each food category. Based on the words in the dictionary for each food category, if a word in the food item can be found in the food category dictionary, the food item will be categorized as such.</p>
 
 
 </section>

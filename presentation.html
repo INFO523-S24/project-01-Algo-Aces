@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head>
+<link href="./images/AlgoAces-logo.webp" rel="icon">
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/tabby.min.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -7,7 +8,7 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.540">
 
   <meta name="author" content="Team Algo Aces- Sai Navya Reddy Busireddy, Gowtham Theeda, Tanya Evita George, Valerie Okine, Monica Tejaswi Kommareddy">
@@ -321,11 +322,11 @@
     }
   </style>
 </head>
-<body class="quarto-light">
+<body class="quarto-dark">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="images/coverimg1.jpg" data-background-opacity="0.7" data-background-size="stretch" data-slide-number="none" class="quarto-title-block center">
+<section id="title-slide" data-background-image="images/coverimg2.jpg" data-background-opacity="0.7" data-background-size="stretch" data-slide-number="none" class="quarto-title-block center">
   <h1 class="title">Fast Food Calories</h1>
   <p class="subtitle">INFO 523 - Spring 2023 - Project 1</p>
 
@@ -338,46 +339,127 @@ Team Algo Aces- Sai Navya Reddy Busireddy, Gowtham Theeda, Tanya Evita George, V
 </div>
 
 </section>
-<section>
-<section id="using-quarto-for-presentations" class="title-slide slide level1 center">
-<h1>Using Quarto for presentations</h1>
+<section id="understanding-the-dataset" class="title-slide slide level1 center">
+<h1>Understanding the Dataset</h1>
 
 </section>
-<section id="quarto" class="slide level2">
-<h2>Quarto</h2>
+
+<section>
+<section id="section" class="title-slide slide level1 center">
+<h1></h1>
 <ul>
-<li><p>The presentation is created using the Quarto CLI</p></li>
-<li><p><code>##</code> sets the start of a new slide</p></li>
+<li>It consists of 18 variables that elaborate on the nutritional compostion of different fast food items.</li>
+<li>Data has been collected from 8 different fast-food outlets.</li>
+<li>Overall, the dataset gives a precise and clear outlook of how healthy or how harmful a certain food item can be for consumption.</li>
+<li>Few of the main variables made use of in this project from the dataset are- ‘total_fat’, ‘calories’, ‘cholestrol’, ’protein.</li>
 </ul>
 </section>
-<section id="layouts" class="slide level2">
-<h2>Layouts</h2>
-<p>You can use plain text</p>
-<div class="columns">
-<div class="column" style="width:40%;">
-<ul>
-<li>or bullet points<sup>1</sup></li>
-</ul>
-</div><div class="column" style="width:60%;">
-<p>or in two columns</p>
+<section id="question-1" class="slide level2">
+<h2>Question 1:</h2>
+<p>‎</p>
+<h3 id="how-many-calories-are-consumed-on-average-per-visit-to-each-restaurant-or-outlet">How many calories are consumed on average per visit to each restaurant or outlet?</h3>
+</section>
+<section id="plots-for-question-1" class="slide level2">
+<h2>Plots for question 1:</h2>
+<div class="panel-tabset">
+<ul id="tabset-1" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-1-1">Plot A</a></li><li><a href="#tabset-1-2">Plot B</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/output1q1.png" class="quarto-figure quarto-figure-center" width="720"></p>
+<figcaption>Violin plot explaining the distribution of calories per visit by restaurant.</figcaption>
+</figure>
 </div>
 </div>
+<div id="tabset-1-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/output2q1.png" class="quarto-figure quarto-figure-center" width="610"></p>
+<figcaption>The plot shows the average count of calories consumed by an individual per visit to a restaurant.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="insights" class="slide level2">
+<h2>Insights</h2>
+<div id="smallerTxt">
 <ul>
-<li><p>like</p></li>
-<li><p>this</p></li>
+<li>Content</li>
 </ul>
-<aside><ol class="aside-footnotes"><li id="fn1"><p>And add footnotes</p></li></ol></aside></section>
+</div>
+</section>
+<section id="question-2" class="slide level2">
+<h2>Question 2:</h2>
+<p>‎</p>
+<h3 id="how-do-different-food-item-categories-vary-in-protien-fat-ratio-and-do-they-meet-up-to-the-standards-of-the-health-metric">How do different food item categories vary in protien-fat ratio and do they meet up to the standards of the health metric?</h3>
+</section>
+<section id="plots-for-question-2" class="slide level2">
+<h2>Plots for question 2:</h2>
+<div class="panel-tabset">
+<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Plot A</a></li><li><a href="#tabset-2-2">Plot B</a></li></ul>
+<div class="tab-content">
+<div id="tabset-2-1">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/output3q2.png" width="700"></p>
+<figcaption>Violin Plot depicting the Protein-Fat Ratio for each restaurant.</figcaption>
+</figure>
+</div>
+</div>
+<div id="tabset-2-2">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="images/output4q2.png" width="700"></p>
+<figcaption>Scatter Plot depicting the Protein-Fat ratio for each restaurant.</figcaption>
+</figure>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section id="insights-1" class="slide level2">
+<h2>Insights</h2>
+<div id="smallerTxt">
+<ul>
+<li>Content</li>
+</ul>
+</div>
+</section></section>
+<section id="conclusion" class="title-slide slide level1 center">
+<h1>Conclusion</h1>
+<ul>
+<li>On an average visit from the list of 8 outlets- Sonic, Arbys and Burger King have proved to have the most calories in that respective order.<br>
+</li>
+<li>Chick Fil-a and Subway have shown to have the largest protein-fat ratios.</li>
+<li>Taco Bell, Sonic, Dairy Queen and Burger King have insignifact differences in their protein-fat ratios.</li>
+</ul>
+</section>
+
+<section>
+<section id="limitations" class="title-slide slide level1 center">
+<h1>Limitations:</h1>
+<ul>
+<li>Content.</li>
+</ul>
+</section>
+<section id="section-1" class="slide level2">
+<h2></h2>
+
+<img data-src="images/thanksimg1.gif" class="quarto-figure quarto-figure-center r-stretch"></section>
 <section id="code" class="slide level2">
 <h2>Code</h2>
-<div id="8e33972d" class="cell" data-execution_count="4">
+<div id="c368124c" class="cell" data-execution_count="4">
 <div class="cell-output cell-output-stdout">
 <pre><code>                            OLS Regression Results                            
 ==============================================================================
 Dep. Variable:                    mpg   R-squared:                       0.073
 Model:                            OLS   Adj. R-squared:                  0.070
 Method:                 Least Squares   F-statistic:                     30.59
-Date:                Mon, 11 Mar 2024   Prob (F-statistic):           5.84e-08
-Time:                        17:59:31   Log-Likelihood:                -1346.4
+Date:                Tue, 12 Mar 2024   Prob (F-statistic):           5.84e-08
+Time:                        22:29:32   Log-Likelihood:                -1346.4
 No. Observations:                 392   AIC:                             2697.
 Df Residuals:                     390   BIC:                             2705.
 Df Model:                           1                                         
@@ -412,7 +494,7 @@ Notes:
 <li><p>goes here</p></li>
 </ul>
 </div><div class="column" style="width:50%;">
-<div id="f9fe9575" class="cell" data-fig.width="5.5" data-execution_count="6">
+<div id="ce6151e1" class="cell" data-fig.width="5.5" data-execution_count="6">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
@@ -432,8 +514,8 @@ Notes:
 <section id="tables" class="slide level2">
 <h2>Tables</h2>
 <p>If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,</p>
-<div id="42774ae5" class="cell" data-execution_count="7">
-<div class="cell-output cell-output-display" data-execution_count="21">
+<div id="4bd29fc3" class="cell" data-execution_count="7">
+<div class="cell-output cell-output-display" data-execution_count="28">
 <table border="1" class="dataframe">
 
 <thead>
@@ -676,21 +758,8 @@ Male
 \]</span></p>
 <p>Limitations:</p>
 <ol type="1">
-<li><p>The source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting <code>$$</code> must appear in the very beginning of a line, followed immediately by a non-space character, and the ending <code>$$</code> must be at the end of a line, led by a non-space character;</p></li>
-<li><p>There should not be spaces after the opening <code>$</code> or before the closing <code>$</code>.</p></li>
+<li>The source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting <code>$$</code> must appear in the very beginning of a line, followed immediately by a non-space character, and the ending <code>$$</code> must be at</li>
 </ol>
-</section></section>
-<section>
-<section id="wrap-up" class="title-slide slide level1 center">
-<h1>Wrap up</h1>
-
-</section>
-<section id="feeling-adventurous" class="slide level2">
-<h2>Feeling adventurous?</h2>
-<ul>
-<li><p>You are welcomed to use the default styling of the slides. In fact, that’s what I expect majority of you will do. You will differentiate yourself with the content of your presentation.</p></li>
-<li><p>But some of you might want to play around with slide styling. Some solutions for this can be found at https://quarto.org/docs/presentations/revealjs.</p></li>
-</ul>
 
 <div class="quarto-auto-generated-content">
 <div class="footer footer-default">
@@ -698,7 +767,6 @@ Male
 </div>
 </div>
 </section></section>
-
     </div>
   </div>
 
@@ -855,14 +923,14 @@ Male
         previewLinks: false,
 
         // Transition style (none/fade/slide/convex/concave/zoom)
-        transition: 'none',
+        transition: 'concave',
 
         // Transition speed (default/fast/slow)
         transitionSpeed: 'default',
 
         // Transition style for full page slide backgrounds
         // (none/fade/slide/convex/concave/zoom)
-        backgroundTransition: 'none',
+        backgroundTransition: 'slide',
 
         // Number of slides away from the current that are visible
         viewDistance: 3,
