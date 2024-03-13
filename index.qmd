@@ -15,7 +15,7 @@ jupyter: python3
 
 #### Introducing the dataset
 
-The “Fast Food Calories” dataset comprises nutritional information for various food items offered by eight distinct fast-food outlets. Each outlet’s menu is detailed, encompassing items such as burgers, fries, beverages, and salads. The dataset’s sources include: research institutions, open data reposiotories(tidytuesday) and compiled data sets from various sources. The dataset contains multiple columns representing different attributes of fast-food items, such as name, restaurant, category, calorie count, fat content, protein content, carbohydrate content, etc. The number of rows corresponds to the number of individual fast-food items for each restaurant in the dataset.
+The “Fast Food Calories” dataset comprises nutritional information for various food items offered by eight distinct fast-food outlets. Each outlet’s menu is detailed, encompassing items such as burgers, fries, beverages, and salads. The dataset’s sources include: research institutions, open data reposiotories(tidytuesday) and compiled data sets from various sources. The dataset contains 18 columns representing different attributes of fast-food items, such as name, restaurant, category, calorie count, fat content, protein content, carbohydrate content, etc. The 515 rows corresponds to the number of individual fast-food items for each restaurant in the dataset.
 
 ### Exploratory Data Analysis
 
