@@ -15,10 +15,7 @@ This study explores how protein-fat ratios differ between meal categories and wh
 
 Insights into the calorie and protein_fat ratios enable consumers to make educated dietary choices by giving information about the nutritional profiles of fast-food options. Furthermore, it provides useful assistance for politicians and public health advocates in developing ways to address diet-related health issues. These findings contribute to the common goal of better service by encouraging responsibility in the fast-food business and furthering nutrition science.
 
-Limitations:
-1)	The reason to choose median over mean to calculate average calories is because the provided data from the dataset is skewed and there is an asymmetrical distribution of the data for the variables. The data also contains outliers which can affect the mean value but not the median.
-2)	The definition of what the health metric should be based on the dataset provided was made difficult. A special health metric was generated based on our analysis for this project.
-
+Limitations: 1) The reason to choose median over mean to calculate average calories is because the provided data from the dataset is skewed and there is an asymmetrical distribution of the data for the variables. The data also contains outliers which can affect the mean value but not the median. 2) The definition of what the health metric should be based on the dataset provided was made difficult. A special health metric was generated based on our analysis for this project.
 
 #### Introduction
 
@@ -133,7 +130,7 @@ plt.grid(False)
 
 #### Discussion
 
-The distribution of calorie consumption per visit across various fast-food restaurants is illustrated by the visualization of a violin plot. The width of each "violin" in the violin plot, corresponds to the density of observations at various calorie levels. Each violin's quartiles provide information on the data's central tendency and distribution, aiding in the understanding of the variability in calorie counts among restaurants. A summary table is printed, which includes information such as mean, standard deviation, minimum, 25th percentile, median (50th percentile), 75th percentile, and maximum calorie counts. This mix of graphic and numerical statistics offers a thorough picture of calorie consumption patterns across different fast-food businesses. 
+The distribution of calorie consumption per visit across various fast-food restaurants is illustrated by the visualization of a violin plot. The width of each "violin" in the violin plot, corresponds to the density of observations at various calorie levels. Each violin's quartiles provide information on the data's central tendency and distribution, aiding in the understanding of the variability in calorie counts among restaurants. A summary table is printed, which includes information such as mean, standard deviation, minimum, 25th percentile, median (50th percentile), 75th percentile, and maximum calorie counts. This mix of graphic and numerical statistics offers a thorough picture of calorie consumption patterns across different fast-food businesses.
 
 The second visualization presents a line plot featuring inverted triangle marker, where each restaurant median calorie is symbolized by a marker. Horizontally positioned according to restaurant names and vertically aligned based on the average calorie count per visit, the plot enables us to discern that certain restaurants boast notably higher median calorie counts. Based on the visualizations presented, it is evident that customers of Chick-fil-A tend to consume the lowest calorie intake per visit, averaging 390 calories, while Sonic customers exhibit the highest calorie consumption per visit, averaging 570 calories. This highlights the substantial variation in the nutritional profiles of meals served at different fast-food establishments. Some restaurants exhibit consistent calorie counts across visits, while others demonstrate greater variability, indicative of a broader selection of food options with varying calorie content.
 
@@ -302,12 +299,24 @@ summary_stats.describe( )
 
 ```
 
-#### Discussion 
+#### Discussion
 
-The half-violin plot depicts how the protein-fat ratio varies between fast-food outlets. The numbers near quartile lines inside the violin plots show each restaurant's median protein-fat ratio. The quartile line range provides information on the nutritional markup of their menu items. Some restaurants have narrower distributions, indicating less protein-fat ratios in those quartile distributions, while others have larger distributions, implying more protein-fat ratio in the quartile ranges. 
+The half-violin plot depicts how the protein-fat ratio varies between fast-food outlets. The numbers near quartile lines inside the violin plots show each restaurant's median protein-fat ratio. The quartile line range provides information on the nutritional markup of their menu items. Some restaurants have narrower distributions, indicating less protein-fat ratios in those quartile distributions, while others have larger distributions, implying more protein-fat ratio in the quartile ranges.
 
-The line plot with a circle marker depicts the protein-fat ratios of several fast-food establishments. Each point in the diagram represents a restaurant, with the placement determined by the protein-fat ratio. The shaded regions determine the threshold for classifying restaurants as either "Needs Improvement" or "Healthy" based on their protein-fat ratios. Restaurants classified in the "Needs Improvement" category suggest that their menu options are characterized by a higher proportion of fat relative to protein. Conversely, eateries placed in the "Healthy" category indicate a more favorable protein-to-fat ratio, implying a healthier balance in their menu offerings. 
+The line plot with a circle marker depicts the protein-fat ratios of several fast-food establishments. Each point in the diagram represents a restaurant, with the placement determined by the protein-fat ratio. The shaded regions determine the threshold for classifying restaurants as either "Needs Improvement" or "Healthy" based on their protein-fat ratios. Restaurants classified in the "Needs Improvement" category suggest that their menu options are characterized by a higher proportion of fat relative to protein. Conversely, eateries placed in the "Healthy" category indicate a more favorable protein-to-fat ratio, implying a healthier balance in their menu offerings.
 
-For the summary statistics table the food items were categorized into 8 main categories, burgers, chicken nuggets/ tenders, chicken sandwiches, hotdogs, other, salads, subway items, and tacos and burritos, these categorizations were done using a dictionary. A dictionary was created for each food category containing certain words distinct to each food category. Based on the words in the dictionary for each food category, if a word in the food item can be found in the food category dictionary, the food item will be categorized as such. 
+For the summary statistics table the food items were categorized into 8 main categories, burgers, chicken nuggets/ tenders, chicken sandwiches, hotdogs, other, salads, subway items, and tacos and burritos, these categorizations were done using a dictionary. A dictionary was created for each food category containing certain words distinct to each food category. Based on the words in the dictionary for each food category, if a word in the food item can be found in the food category dictionary, the food item will be categorized as such.
 
 These findings and statistics can mainly aid eateries improve their food quality and customer satisfaction.
+
+#### Group members
+
+-   Sai Navya Reddy: First year graduate student Data Science at University of Arizona.
+
+-   Gowtham Theeda: First year graduate student Data Science at University of Arizona.
+
+-   Tanya Evita George: First year graduate student Data Science at University of Arizona.
+
+-   Monica Tejaswi Kommareddy:First year graduate student Data Science at University of Arizona.
+
+-   Valerie Naa Dei Okine: First year graduate student Data Science at University of Arizona
