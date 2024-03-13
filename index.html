@@ -229,7 +229,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </section>
 <section id="part-1" class="level4">
 <h4 class="anchored" data-anchor-id="part-1">Part 1</h4>
-<div id="e20dd25c" class="cell" data-message="false" data-execution_count="1">
+<div id="709a783e" class="cell" data-message="false" data-execution_count="1">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
@@ -401,7 +401,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 <p>Part 2</p>
-<div id="e31c3379" class="cell" data-message="false" data-execution_count="2">
+<div id="ed1b7363" class="cell" data-message="false" data-execution_count="2">
 <details class="code-fold">
 <summary>Code</summary>
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
@@ -426,9 +426,9 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb3-20"><a href="#cb3-20" aria-hidden="true" tabindex="-1"></a>    plt.text(restaurant, median_calories.loc[i, <span class="st">'calories'</span>] <span class="op">-</span> <span class="dv">15</span>, <span class="ss">f"</span><span class="sc">{</span>median_calories<span class="sc">.</span>loc[i, <span class="st">'calories'</span>]<span class="sc">:.0f}</span><span class="ss">"</span>, ha<span class="op">=</span><span class="st">'center'</span>, fontsize<span class="op">=</span><span class="dv">10</span>, color<span class="op">=</span><span class="st">'black'</span>)</span>
 <span id="cb3-21"><a href="#cb3-21" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-22"><a href="#cb3-22" aria-hidden="true" tabindex="-1"></a><span class="co"># Add title and labels</span></span>
-<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Calories per visit to a Restaurant'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
-<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Restaurant'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
-<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Calories per visit'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb3-23"><a href="#cb3-23" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Calories per visit to a Restaurant'</span>,fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb3-24"><a href="#cb3-24" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Restaurant'</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb3-25"><a href="#cb3-25" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Calories per visit'</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
 <span id="cb3-26"><a href="#cb3-26" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb3-27"><a href="#cb3-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Rotate x-axis labels for better readability (optional)</span></span>
 <span id="cb3-28"><a href="#cb3-28" aria-hidden="true" tabindex="-1"></a>plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>, ha<span class="op">=</span><span class="st">'right'</span>)</span>
@@ -445,7 +445,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/cell-3-output-1.png" width="822" height="588" class="figure-img"></p>
+<p><img src="index_files/figure-html/cell-3-output-1.png" width="816" height="578" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -511,12 +511,12 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb4-34"><a href="#cb4-34" aria-hidden="true" tabindex="-1"></a>    plt.text(median_protein_fat_ratio[<span class="st">'Protein_fat_ratio'</span>][i], i, <span class="ss">f"</span><span class="sc">{</span>median_protein_fat_ratio[<span class="st">'Protein_fat_ratio'</span>][i]<span class="sc">:.2f}</span><span class="ss">"</span>, fontsize<span class="op">=</span><span class="dv">10</span>, va<span class="op">=</span><span class="st">'center'</span>, ha<span class="op">=</span><span class="st">'right'</span>, color<span class="op">=</span><span class="st">'black'</span>)</span>
 <span id="cb4-35"><a href="#cb4-35" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-36"><a href="#cb4-36" aria-hidden="true" tabindex="-1"></a><span class="co"># Add title and labels</span></span>
-<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Protein-Fat Ratio by Restaurant'</span>, fontsize<span class="op">=</span><span class="dv">16</span>)</span>
-<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Protein-Fat Ratio'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
-<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Restaurant'</span>, fontsize<span class="op">=</span><span class="dv">14</span>)</span>
+<span id="cb4-37"><a href="#cb4-37" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Protein-Fat Ratio by Restaurant'</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb4-38"><a href="#cb4-38" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Protein-Fat Ratio'</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb4-39"><a href="#cb4-39" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Restaurant'</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
 <span id="cb4-40"><a href="#cb4-40" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-41"><a href="#cb4-41" aria-hidden="true" tabindex="-1"></a><span class="co"># Customize y-axis labels</span></span>
-<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a>plt.yticks(fontsize<span class="op">=</span><span class="dv">12</span>)</span>
+<span id="cb4-42"><a href="#cb4-42" aria-hidden="true" tabindex="-1"></a><span class="co">#plt.yticks(fontsize=12)</span></span>
 <span id="cb4-43"><a href="#cb4-43" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb4-44"><a href="#cb4-44" aria-hidden="true" tabindex="-1"></a><span class="co"># Show the plot</span></span>
 <span id="cb4-45"><a href="#cb4-45" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
@@ -526,7 +526,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <div class="cell-output cell-output-display">
 <div>
 <figure class="figure">
-<p><img src="index_files/figure-html/figure3-output-1.png" id="figure3" width="1141" height="758" class="figure-img"></p>
+<p><img src="index_files/figure-html/figure3-output-1.png" id="figure3" width="1142" height="758" class="figure-img"></p>
 </figure>
 </div>
 </div>
@@ -546,24 +546,24 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a><span class="co"># Plot points for protein fat ratios for each restaurant</span></span>
 <span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> i, restaurant <span class="kw">in</span> <span class="bu">enumerate</span>(restaurants):</span>
-<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    plt.scatter([protein_fat_ratios[i]], [restaurant], label<span class="op">=</span>restaurant, marker<span class="op">=</span><span class="st">'o'</span>)</span>
+<span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    plt.scatter([protein_fat_ratios[i]], [restaurant], marker<span class="op">=</span><span class="st">'o'</span>)</span>
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a><span class="co"># Shade the regions</span></span>
 <span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>plt.axvspan(<span class="fl">0.25</span>, <span class="fl">0.40</span>, color<span class="op">=</span><span class="st">'lightcoral'</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, label<span class="op">=</span><span class="st">'Needs Improvement'</span>)</span>
 <span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>plt.axvspan(<span class="fl">0.40</span>, <span class="fl">0.50</span>, color<span class="op">=</span><span class="st">'lightgreen'</span>, alpha<span class="op">=</span><span class="fl">0.5</span>, label<span class="op">=</span><span class="st">'Healthy'</span>)</span>
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Labels and legend</span></span>
-<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Protein Fat Ratio'</span>)</span>
-<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Restaurants'</span>)</span>
-<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Protein Fat Ratio of Restaurants'</span>)</span>
-<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a><span class="co"># Customize y-axis labels</span></span>
-<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a>plt.yticks(restaurants)</span>
-<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a><span class="co"># Show plot</span></span>
-<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
-<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
-<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a><span class="co"># Labels and legend for shaded regions</span></span>
+<span id="cb5-19"><a href="#cb5-19" aria-hidden="true" tabindex="-1"></a>plt.xlabel(<span class="st">'Protein Fat Ratio'</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb5-20"><a href="#cb5-20" aria-hidden="true" tabindex="-1"></a>plt.ylabel(<span class="st">'Restaurants'</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb5-21"><a href="#cb5-21" aria-hidden="true" tabindex="-1"></a>plt.title(<span class="st">'Protein Fat Ratio of Restaurants'</span>, fontweight<span class="op">=</span><span class="st">'bold'</span>)</span>
+<span id="cb5-22"><a href="#cb5-22" aria-hidden="true" tabindex="-1"></a>plt.legend()</span>
+<span id="cb5-23"><a href="#cb5-23" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-24"><a href="#cb5-24" aria-hidden="true" tabindex="-1"></a><span class="co"># Customize y-axis labels</span></span>
+<span id="cb5-25"><a href="#cb5-25" aria-hidden="true" tabindex="-1"></a>plt.yticks(restaurants)</span>
+<span id="cb5-26"><a href="#cb5-26" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-27"><a href="#cb5-27" aria-hidden="true" tabindex="-1"></a><span class="co"># Show plot</span></span>
+<span id="cb5-28"><a href="#cb5-28" aria-hidden="true" tabindex="-1"></a>plt.grid(<span class="va">True</span>, linestyle<span class="op">=</span><span class="st">'--'</span>, alpha<span class="op">=</span><span class="fl">0.7</span>)</span>
+<span id="cb5-29"><a href="#cb5-29" aria-hidden="true" tabindex="-1"></a>plt.tight_layout()</span>
 <span id="cb5-30"><a href="#cb5-30" aria-hidden="true" tabindex="-1"></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </details>
 <div class="cell-output cell-output-display">
@@ -743,7 +743,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 </div>
 </div>
 </div>
-<p>###Discussion The half-violin plot depicts how the protein-fat ratio varies between fast-food outlets. The numbers near quartile lines inside the violin plots show each restaurant’s median protein-fat ratio. The quartile line range provides information on the nutritional markup of their menu items. Some restaurants have narrower distributions, indicating less protein-fat ratios in those quartile distributions, while others have larger distributions, implying more protein-fat ratio in the quartile ranges. The line plot with a circle marker depicts the protein-fat ratios of several fast-food establishments. Each point in the diagram represents a restaurant, with the placement determined by the protein-fat ratio. The shaded regions determine the threshold for classifying restaurants as either “Needs Improvement” or “Healthy” based on their protein-fat ratios. Restaurants classified in the “Needs Improvement” category suggest that their menu options are characterized by a higher proportion of fat relative to protein. Conversely, eateries placed in the “Healthy” category indicate a more favorable protein-to-fat ratio, implying a healthier balance in their menu offerings. For the summary statistics table the food items were categorized into 8 main categories, burgers, chicken nuggets/ tenders, chicken sandwiches, hotdogs, other, salads, subway items, and tacos and burritos, these categorizations were done using a dictionary. A dictionary was created for each food category containing certain words distinct to each food category. Based on the words in the dictionary for each food category, if a word in the food item can be found in the food category dictionary, the food item will be categorized as such.</p>
+</section>
+<section id="discussion-1" class="level4">
+<h4 class="anchored" data-anchor-id="discussion-1">Discussion</h4>
+<p>The half-violin plot depicts how the protein-fat ratio varies between fast-food outlets. The numbers near quartile lines inside the violin plots show each restaurant’s median protein-fat ratio. The quartile line range provides information on the nutritional markup of their menu items. Some restaurants have narrower distributions, indicating less protein-fat ratios in those quartile distributions, while others have larger distributions, implying more protein-fat ratio in the quartile ranges. The line plot with a circle marker depicts the protein-fat ratios of several fast-food establishments. Each point in the diagram represents a restaurant, with the placement determined by the protein-fat ratio. The shaded regions determine the threshold for classifying restaurants as either “Needs Improvement” or “Healthy” based on their protein-fat ratios. Restaurants classified in the “Needs Improvement” category suggest that their menu options are characterized by a higher proportion of fat relative to protein. Conversely, eateries placed in the “Healthy” category indicate a more favorable protein-to-fat ratio, implying a healthier balance in their menu offerings. For the summary statistics table the food items were categorized into 8 main categories, burgers, chicken nuggets/ tenders, chicken sandwiches, hotdogs, other, salads, subway items, and tacos and burritos, these categorizations were done using a dictionary. A dictionary was created for each food category containing certain words distinct to each food category. Based on the words in the dictionary for each food category, if a word in the food item can be found in the food category dictionary, the food item will be categorized as such.</p>
 
 
 </section>
