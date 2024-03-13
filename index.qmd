@@ -21,15 +21,15 @@ The “Fast Food Calories” dataset comprises nutritional information for vario
 
 #### Question 1
 
-What is the average calorie consumption per visit at each fast food restaurant or outlet?
+What is the median calorie consumption per visit at each fast food restaurant or outlet?
 
 Introduction
 
-This question allows us to grasp the average calorie intake per visit across different fast food restaurants, providing insights into their nutritional profiles. By analysing the typical calorie intake, we can learn a lot about the energy content of foods served in popular fast food outlets. Examining average calorie consumption each visit acts as a realistic nutritional guide for people who are conscious of their meal choices, providing helpful information in choosing healthier eating habits. It can also be an important resource for government bodies concerned with public health, giving information that can be used to develop policies aiming at increasing nutritional standards and fighting diet-related health concerns in communities.
+This question allows us to grasp the median calorie intake per visit across different fast food restaurants, providing insights into their nutritional profiles. By analysing the typical calorie intake, we can learn a lot about the energy content of foods served in popular fast food outlets. Examining median calorie consumption each visit acts as a realistic nutritional guide for people who are conscious of their meal choices, providing helpful information in choosing healthier eating habits. It can also be an important resource for government bodies concerned with public health, giving information that can be used to develop policies aiming at increasing nutritional standards and fighting diet-related health concerns in communities.
 
 #### Approach
 
-We'll use the "groupby.describe()" method to create a summary table with contains statistical information like mean, mode, median, minimum, and maximum calorie content for each item in every restaurant. The variables used for this analysis are Restaurant, Item, Total Fat, and Calories. To calculate the average calories consumed per person, we will add the total calories from all items in each restaurant and divide by the number of items. This data is visualised using a half-violin plot, which will provide a clear picture of the distribution of average calorie intake per person across different eateries, allowing for a better understanding and interpretation of nutrition patterns.
+We'll use the "groupby.describe()" method to create a summary table with contains statistical information like mean, mode, median, minimum, and maximum calorie content for each item in every restaurant. The variables used for this analysis are Restaurant, Item, Total Fat, and Calories. We computed the median calories consumed per person due to the distributional nature of the data. This data is visualised using a violin plot, which will provide a clear picture of the distribution of median calorie intake per person across different eateries, allowing for a better understanding and interpretation of nutrition patterns. The line plot with triangle marker is used to visualise the median calories of each restuarent. The median which is used as a central tendency metric is best visualised using the line plot. We also have derived summary statistics atble for each restuarent.
 
 #### Analysis
 
@@ -57,7 +57,7 @@ summary_table = df.groupby('restaurant')['calories']
 # Sort the DataFrame by restaurant names
 df_sorted = df.sort_values(by='restaurant')
 
-# Plot half violin plot
+# Plotting violin plot
 plt.figure(figsize=(12, 8))
 violin = sns.violinplot(x='calories', y='restaurant', data=df_sorted, inner='quartile', cut=0, palette='husl')
 plt.title('Distribution of Calories per Visit by Restaurant', fontweight='bold')
@@ -121,8 +121,8 @@ plt.grid(False)
 
 ```
 #### Discussion
-The distribution of calorie consumption per visit across various fast-food restaurants is illustrated by the visualization of a half-violin plot. The width of each "violin" in the violin plot, corresponds to the density of observations at various calorie levels. Each violin's quartiles provide information on the data's central tendency and distribution, aiding in the understanding of the variability in calorie counts among restaurants. A summary table is printed, which includes information such as mean, standard deviation, minimum, 25th percentile, median (50th percentile), 75th percentile, and maximum calorie counts. This mix of graphic and numerical statistics offers a thorough picture of calorie consumption patterns across different fast-food businesses. 
-The second visualization presents a line plot featuring inverted triangles, where each restaurant is symbolized by a marker. Horizontally positioned according to restaurant names and vertically aligned based on the average calorie count per visit, the plot enables us to discern that certain restaurants boast notably higher average calorie counts. This highlights the substantial variation in the nutritional profiles of meals served at different fast-food establishments. Some restaurants exhibit consistent calorie counts across visits, while others demonstrate greater variability, indicative of a broader selection of food options with varying calorie content.
+The distribution of calorie consumption per visit across various fast-food restaurants is illustrated by the visualization of a violin plot. The width of each "violin" in the violin plot, corresponds to the density of observations at various calorie levels. Each violin's quartiles provide information on the data's central tendency and distribution, aiding in the understanding of the variability in calorie counts among restaurants. A summary table is printed, which includes information such as mean, standard deviation, minimum, 25th percentile, median (50th percentile), 75th percentile, and maximum calorie counts. This mix of graphic and numerical statistics offers a thorough picture of calorie consumption patterns across different fast-food businesses. 
+The second visualization presents a line plot featuring inverted triangles, where each restaurant is symbolized by a marker. Horizontally positioned according to restaurant names and vertically aligned based on the average calorie count per visit, the plot enables us to discern that certain restaurants boast notably higher median calorie counts. This highlights the substantial variation in the nutritional profiles of meals served at different fast-food establishments. Some restaurants exhibit consistent calorie counts across visits, while others demonstrate greater variability, indicative of a broader selection of food options with varying calorie content.
 
 
 
@@ -136,6 +136,8 @@ How do different food item categories vary in protien-fat ratio and do they meet
 The goal of this question is to examine the wide range of protein-fat ratios seen in different dietary categories and determine how well they correspond with recognized health measures. Examining the variations in protein-fat proportions among different types of food items is crucial for evaluating their nutritional value. By analyzing these ratios and comparing them with health benchmarks, we can identify food categories that meet recommended nutritional criteria and those that may benefit from adjustments to optimize health benefits. Through this analysis, we aim to gain a deeper understanding of the complex interplay between dietary composition and its impact on health outcomes.
 
 #### Approach
+
+For question 2, we'll use the "protein" and "item" variables. To standardize the proteins and fats we'll convert them to calories. By employing the protein-fat ratio, we established a health metric to classify food items as healthy or unhealthy. We have used a half-violin plot to visualize these findings. The half-violin plot is particularly helpful since it demonstrates the distribution of our data while simultaneously indicating its symmetry. The shape of the plot gives us insight into the density of our data, which helps us comprehend the distribution of our health metrics. We have also used a scatter plot to visualize the median protein-fat ratio of each restaurant. Using these Scatter plots provides a clear visual representation of the data points' dispersion. The summary statistics table for the menu items offered by each of these eateries was found based on the protein-fat ratio.
 
 #### Analysis
 
