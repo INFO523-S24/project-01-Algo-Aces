@@ -53,7 +53,7 @@
     "href": "presentation.html#code",
     "title": "Fast Food Calories",
     "section": "Code",
-    "text": "Code\n\n\n                            OLS Regression Results                            \n==============================================================================\nDep. Variable:                    mpg   R-squared:                       0.073\nModel:                            OLS   Adj. R-squared:                  0.070\nMethod:                 Least Squares   F-statistic:                     30.59\nDate:                Tue, 12 Mar 2024   Prob (F-statistic):           5.84e-08\nTime:                        15:21:55   Log-Likelihood:                -1346.4\nNo. Observations:                 392   AIC:                             2697.\nDf Residuals:                     390   BIC:                             2705.\nDf Model:                           1                                         \nCovariance Type:            nonrobust                                         \n==============================================================================\n                 coef    std err          t      P&gt;|t|      [0.025      0.975]\n------------------------------------------------------------------------------\nconst         35.8015      2.266     15.800      0.000      31.347      40.257\nspeed       -354.7055     64.129     -5.531      0.000    -480.788    -228.623\n==============================================================================\nOmnibus:                       27.687   Durbin-Watson:                   0.589\nProb(Omnibus):                  0.000   Jarque-Bera (JB):               18.976\nSkew:                           0.420   Prob(JB):                     7.57e-05\nKurtosis:                       2.323   Cond. No.                         169.\n==============================================================================\n\nNotes:\n[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
+    "text": "Code\n\n\n                            OLS Regression Results                            \n==============================================================================\nDep. Variable:                    mpg   R-squared:                       0.073\nModel:                            OLS   Adj. R-squared:                  0.070\nMethod:                 Least Squares   F-statistic:                     30.59\nDate:                Tue, 12 Mar 2024   Prob (F-statistic):           5.84e-08\nTime:                        22:14:17   Log-Likelihood:                -1346.4\nNo. Observations:                 392   AIC:                             2697.\nDf Residuals:                     390   BIC:                             2705.\nDf Model:                           1                                         \nCovariance Type:            nonrobust                                         \n==============================================================================\n                 coef    std err          t      P&gt;|t|      [0.025      0.975]\n------------------------------------------------------------------------------\nconst         35.8015      2.266     15.800      0.000      31.347      40.257\nspeed       -354.7055     64.129     -5.531      0.000    -480.788    -228.623\n==============================================================================\nOmnibus:                       27.687   Durbin-Watson:                   0.589\nProb(Omnibus):                  0.000   Jarque-Bera (JB):               18.976\nSkew:                           0.420   Prob(JB):                     7.57e-05\nKurtosis:                       2.323   Cond. No.                         169.\n==============================================================================\n\nNotes:\n[1] Standard Errors assume that the covariance matrix of the errors is correctly specified."
   },
   {
     "objectID": "presentation.html#plots",
@@ -88,7 +88,7 @@
     "href": "presentation.html#math-expressions",
     "title": "Fast Food Calories",
     "section": "Math Expressions",
-    "text": "Math Expressions\nYou can write LaTeX math expressions inside a pair of dollar signs, e.g. $\\alpha+\\beta$ renders \\(\\alpha + \\beta\\). You can use the display style with double dollar signs:\n$$\\bar{X}=\\frac{1}{n}\\sum_{i=1}^nX_i$$\n\\[\n\\bar{X}=\\frac{1}{n}\\sum_{i=1}^nX_i\n\\]\nLimitations:\n\nThe source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting $$ must appear in the very beginning of a line, followed immediately by a non-space character, and the ending $$ must be at the end of a line, led by a non-space character;\nThere should not be spaces after the opening $ or before the closing $."
+    "text": "Math Expressions\nYou can write LaTeX math expressions inside a pair of dollar signs, e.g. $\\alpha+\\beta$ renders \\(\\alpha + \\beta\\). You can use the display style with double dollar signs:\n$$\\bar{X}=\\frac{1}{n}\\sum_{i=1}^nX_i$$\n\\[\n\\bar{X}=\\frac{1}{n}\\sum_{i=1}^nX_i\n\\]\nLimitations:\n\nThe source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting $$ must appear in the very beginning of a line, followed immediately by a non-space character, and the ending $$ must be at"
   },
   {
     "objectID": "presentation.html#feeling-adventurous",
@@ -96,5 +96,33 @@
     "title": "Fast Food Calories",
     "section": "Feeling adventurous?",
     "text": "Feeling adventurous?\n\nYou are welcomed to use the default styling of the slides. In fact, that’s what I expect majority of you will do. You will differentiate yourself with the content of your presentation.\nBut some of you might want to play around with slide styling. Some solutions for this can be found at https://quarto.org/docs/presentations/revealjs."
+  },
+  {
+    "objectID": "presentation.html#question-1",
+    "href": "presentation.html#question-1",
+    "title": "Fast Food Calories",
+    "section": "Question 1:",
+    "text": "Question 1:\n‎\nHow many calories are consumed on average per visit to each restaurant or outlet?"
+  },
+  {
+    "objectID": "presentation.html#plots-for-question-1",
+    "href": "presentation.html#plots-for-question-1",
+    "title": "Fast Food Calories",
+    "section": "Plots for question 1:",
+    "text": "Plots for question 1:\n\nPlot APlot BInsights\n\n\n\n\n\nViolin plot explaining the distribution of calories per visit by restaurant.\n\n\n\n\n\n\n\nThe plot shows the average count of calories consumed by an individual per visit to a restaurant.\n\n\n\n\n\n\nContent"
+  },
+  {
+    "objectID": "presentation.html#question-2",
+    "href": "presentation.html#question-2",
+    "title": "Fast Food Calories",
+    "section": "Question 2:",
+    "text": "Question 2:\n‎\nHow do different food item categories vary in protien-fat ratio and do they meet up to the standards of the health metric?"
+  },
+  {
+    "objectID": "presentation.html#plots-for-question-2",
+    "href": "presentation.html#plots-for-question-2",
+    "title": "Fast Food Calories",
+    "section": "Plots for question 2:",
+    "text": "Plots for question 2:\n\nPlot APlot BInsights\n\n\n\n\n\nViolin Plot depicting the Protein-Fat Ratio for each restaurant.\n\n\n\n\n\n\n\nScatter Plot depicting the Protein-Fat ratio for each restaurant.\n\n\n\n\n\n\nContent"
   }
 ]

@@ -58,47 +58,83 @@ mtcars['speed'] = mtcars['horsepower'] / mtcars['weight']
 penguins = sns.load_dataset('penguins').dropna()
 ```
 
-# Understanding the Dataset- 
+# Understanding the Dataset 
 
 # 
 
 -   It consists of 18 variables that elaborate on the nutritional compostion of different fast food items.
 -   Data has been collected from 8 different fast-food outlets.
 -   Overall, the dataset gives a precise and clear outlook of how healthy or how harmful a certain food item can be for consumption.
+-   Few of the main variables made use of in this project from the dataset are- 'total_fat', 'calories', 'cholestrol', 'protein.
+
+## Question 1:
+
+‎
+
+### How many calories are consumed on average per visit to each restaurant or outlet?
+
+## Plots for question 1:
+
+::: panel-tabset
+
+#### Plot A
+
+![Violin plot explaining the distribution of calories per visit by restaurant.](images/output1q1.png){fig-align="center" width="720"}
+
+#### Plot B
+
+![The plot shows the average count of calories consumed by an individual per visit to a restaurant.](images/output2q1.png){fig-align="center" width="610"}
+
+#### Insights
+
+::: {#smallerTxt}
+-   Content
+
+:::
+
+:::
+
+## Question 2:
+
+‎
+
+### How do different food item categories vary in protien-fat ratio and do they meet up to the standards of the health metric?
+
+## Plots for question 2:
+
+::: panel-tabset
+#### Plot A
+
+![Violin Plot depicting the Protein-Fat Ratio for each restaurant.](images/output3q2.png){width="700"}
+
+#### Plot B
+
+![Scatter Plot depicting the Protein-Fat ratio for each restaurant.](images/output4q2.png){width="700"}
+
+#### Insights
+
+::: {#smallerTxt}
+-   Content
+
+:::
+
+:::
+
+# Challenges faced:
+-   Content.
+
+
+# Conclusion
+
+-   On an average visit from the list of 8 outlets- Sonic, Arbys and Burger King have proved to have the most calories in that respective order.  
+-   Chick Fil-a and Subway have shown to have the largest protein-fat ratios.
+-   Taco Bell, Sonic, Dairy Queen and Burger King have insignifact differences in their protein-fat ratios.
 
 ## 
 
--   The whole dataset consists of three DataFrames:
-    -   "character": Includes high level information including a notability score about each character.
-    -   "psych_stats": Consist data on personality/psychometric stats per character.
-    -   "myers_briggs": Test users self-identified their Myers-Briggs types.
-# Using Quarto for presentations
+![](images/thanksimg1.gif){fig-align="center"}
 
-## Quarto
 
--   The presentation is created using the Quarto CLI
-
--   `##` sets the start of a new slide
-
-## Layouts
-
-You can use plain text
-
-::: columns
-::: {.column width="40%"}
--   or bullet points[^1]
-:::
-
-::: {.column width="60%"}
-or in two columns
-:::
-:::
-
-[^1]: And add footnotes
-
--   like
-
--   this
 
 ## Code
 
@@ -175,14 +211,4 @@ $$
 
 Limitations:
 
-1.  The source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting `$$` must appear in the very beginning of a line, followed immediately by a non-space character, and the ending `$$` must be at the end of a line, led by a non-space character;
-
-2.  There should not be spaces after the opening `$` or before the closing `$`.
-
-# Wrap up
-
-## Feeling adventurous?
-
--   You are welcomed to use the default styling of the slides. In fact, that's what I expect majority of you will do. You will differentiate yourself with the content of your presentation.
-
--   But some of you might want to play around with slide styling. Some solutions for this can be found at https://quarto.org/docs/presentations/revealjs.
+1.  The source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting `$$` must appear in the very beginning of a line, followed immediately by a non-space character, and the ending `$$` must be at 
