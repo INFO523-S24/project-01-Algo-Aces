@@ -58,6 +58,20 @@ mtcars['speed'] = mtcars['horsepower'] / mtcars['weight']
 penguins = sns.load_dataset('penguins').dropna()
 ```
 
+# Understanding the Dataset- 
+
+# 
+
+-   It consists of 18 variables that elaborate on the nutritional compostion of different fast food items.
+-   Data has been collected from 8 different fast-food outlets.
+-   Overall, the dataset gives a precise and clear outlook of how healthy or how harmful a certain food item can be for consumption.
+
+## 
+
+-   The whole dataset consists of three DataFrames:
+    -   "character": Includes high level information including a notability score about each character.
+    -   "psych_stats": Consist data on personality/psychometric stats per character.
+    -   "myers_briggs": Test users self-identified their Myers-Briggs types.
 # Using Quarto for presentations
 
 ## Quarto
