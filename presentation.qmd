@@ -19,9 +19,6 @@ execute:
   echo: false
 ---
 
-
-
-
 ```{python}
 #| label: load-packages
 #| include: false
@@ -58,16 +55,14 @@ mtcars['speed'] = mtcars['horsepower'] / mtcars['weight']
 penguins = sns.load_dataset('penguins').dropna()
 ```
 
-# Understanding the Dataset 
+# Understanding the Dataset
 
 # 
 
--   The dataset provides information on the nutritional composition of different fast food items as well as their respective calorie counts across 8 outlets.                                                                                 
--    It contains a variety of meal components which makes it possible to analyze individual foods to produce meals with certain nutritional
-profiles.                                                                  
+-   The dataset provides information on the nutritional composition of different fast food items as well as their respective calorie counts across 8 outlets.\
+-   It contains a variety of meal components which makes it possible to analyze individual foods to produce meals with certain nutritional profiles.\
 -   Few of the main variables made use of in this project from the dataset are- ‘total_fat’, ‘calories’, 'protein'and 'cal_fat'.
 -   This dataset is useful for analyzing nutritional content, comparing calorie counts across different chains, and investigating trends.
-
 
 ## Question 1:
 
@@ -78,7 +73,6 @@ profiles.
 ## Plots for question 1:
 
 ::: panel-tabset
-
 #### Plot A
 
 ![Violin plot explaining the distribution of calories per visit by outlet.](images/output1q1.png){fig-align="center" width="720"}
@@ -86,19 +80,15 @@ profiles.
 #### Plot B
 
 ![The plot shows the count (median) of calories consumed by an individual per visit.](images/output2q1(corrected).png){fig-align="center" width="610"}
-
 :::
-
 
 ## Insights
 
 ::: {#smallerTxt}
--   Plot A (Violin Plot) represents the density distribution of calorie count through various outlets. It also shows the median values of each of the distribution. 
--   Plot B (Scatter Plot) provides a lucid visualization of the results of plot A, considering the median values to be the central measure of calorie count per visit to an outlet.
+-   Plot A (Violin Plot) represents the density distribution of calorie count through various outlets. It also shows the median values of each of the distribution.
+-   Plot B (Line Plot) provides a lucid visualization of the results of plot A, considering the median values to be the central measure of calorie count per visit to an outlet.
 -   From the Plots A & B we can infer that Chick Fil-A has the lowest calorie count per visit with a value of 390 cal. Hence it is the better option of all outlets, especially for calorie conscious customers.
-
 :::
-
 
 ## Question 2:
 
@@ -116,33 +106,34 @@ profiles.
 #### Plot B
 
 ![Line Plot depicting the Protein-Fat ratio for each outlet.](images/output4q2(corrected).png){width="650"}
-
 :::
 
 ## Insights
 
-::: {#smallerTxt}
+<div>
+
 -   Plot A (Half violin plot) represents the density distribution of protein to fat ratio of all items throughout the outlets. The medians have been considered as the overall protein to fat ratio in an item consumed per visit to an outlet.
 -   Plot B (Line plot) extends the analysis on the results of plot A by showing the median values and categorizing them into - RED & GREEN regions.
 -   Outlets in RED region (ratio 0-0.4) fall in the low protein high fat category whereas the ones in GREEN region (ratio 0.4-0.5) fall in High protein low fat category indicating healthier food supply.
 
-:::
+</div>
 
 # Conclusions:
- 
+
 -   Chick Fil-A has the lowest calorie count (390) per visit which is suitable for people who are health-concious and follow a strict diet.
 -   Out of all the outlets, Chick Fil-A and Subway have been shown to have a high protein constitution and are considered healthy.
 -   According to the health metric, the remaining 6 outlets could improve the protein content in their food items in order to be a considered as a healthy option.
 
-
 # Limitations:
 
-:::{#smallerTxt}
--   The nature of the spread of the data made the mean unsuitable for analytical purposes, as a result, the median was used. 
--   There were no meal combos for the food items in the data set. This would have made the analysis more significant. 
+<div>
+
+-   The nature of the spread of the data made the mean unsuitable for analytical purposes, as a result, the median was used.
+-   There were no meal combos for the food items in the data set. This would have made the analysis more significant.
 -   There were no sales information on the food items in the data set. This restricted our findings solely to health and nothing about the economical aspect.
 -   The definition of what the health metric should be based on the dataset provided was made difficult. The health metric created is restricted to the values we obtained from the results of our plots.
-:::
+
+</div>
 
 ## 
 
