@@ -5,8 +5,9 @@ editor: visual
 jupyter: python3
 ---
 
-This project was developed by **\[Team Name\]** For [INFO 523 - Data Mining and Discovery](https://datamineaz.org/) at the University of Arizona, taught by Dr. Greg Chism. The team is comprised of the following team members.
+This project was developed by Algo Aces For [INFO 523 - Data Mining and Discovery](https://datamineaz.org/) at the University of Arizona, taught by Dr. Greg Chism. The team is comprised of the following team members.
 
+<<<<<<< HEAD
 -   Valerie Naa Dei Okine: First year graduate student Data Science at University of Arizona.
 
 -   Sai Navya Reddy: First year graduate student Data Science at University of Arizona.
@@ -16,3 +17,14 @@ This project was developed by **\[Team Name\]** For [INFO 523 - Data Mining and 
 -   Tanya Evita George: First year graduate student Data Science at University of Arizona.
 
 -   Monica Tejaswi Kommareddy:First year graduate student Data Science at University of Arizona.
+=======
+-   Sai Navya Reddy: First year graduate student Data Science at University of Arizona.
+
+-   Gowtham Theeda: First year graduate student Data Science at University of Arizona.
+
+-   Tanya Evita George: First year graduate student Data Science at University of Arizona.
+
+-   Monica Tejaswi Kommareddy:First year graduate student Data Science at University of Arizona.
+
+-   Valerie Naa Dei Okine: First year graduate student Data Science at the University of Arizona
+>>>>>>> a7ca891fa1f432192ffc938e053fb76791ea74cc
