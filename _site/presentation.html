@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head>
+<link href="./images/AlgoAces-logo.webp" rel="icon">
 <script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/tabby.min.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
@@ -7,7 +8,7 @@
 <link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="site_libs/quarto-html/light-border.css" rel="stylesheet">
 <link href="site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+<link href="site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Team Algo Aces- Sai Navya Reddy Busireddy, Gowtham Theeda, Tanya Evita George, Valerie Okine, Monica Tejaswi Kommareddy">
@@ -321,7 +322,7 @@
     }
   </style>
 </head>
-<body class="quarto-dark">
+<body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
@@ -343,23 +344,16 @@ Team Algo Aces- Sai Navya Reddy Busireddy, Gowtham Theeda, Tanya Evita George, V
 
 </section>
 
+<section>
 <section id="section" class="title-slide slide level1 center">
 <h1></h1>
 <ul>
-<li>The dataset provides information on the nutritional composition of different fast food items as well as their respective calorie counts across 8 outlets- Arbys, Burger King, Chick Fil-A, Dairy Queen, McDonalds, Sonic, Subway and Taco Bell.<br>
+<li>The dataset provides information on the nutritional composition of different fast food items as well as their respective calorie counts across 8 outlets.<br>
 </li>
-<li>Nutritional data, including calories, total fat, saturated fat, cholesterol, sodium, carbs, fiber, sugars, and protein, are included with every item in the dataset to give a thorough picture of the nutritional makeup of each food item.</li>
-</ul>
-</section>
-
-<section>
-<section id="section-1" class="title-slide slide level1 center">
-<h1></h1>
-<ul>
-<li>It contains a variety of meal components, such as sides and main courses. This makes it possible to analyze both individual foods and possible combos to produce meals with certain nutritional profiles.<br>
+<li>It contains a variety of meal components which makes it possible to analyze individual foods to produce meals with certain nutritional profiles.<br>
 </li>
 <li>Few of the main variables made use of in this project from the dataset are- ‘total_fat’, ‘calories’, ‘protein’and&nbsp;’cal_fat’.</li>
-<li>The variety of food items available meets the dietary requirements and tastes of a broad spectrum of customers.</li>
+<li>This dataset is useful for analyzing nutritional content, comparing calorie counts across different chains, and investigating trends.</li>
 </ul>
 </section>
 <section id="question-1" class="slide level2">
@@ -376,7 +370,7 @@ Team Algo Aces- Sai Navya Reddy Busireddy, Gowtham Theeda, Tanya Evita George, V
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/output1q1.png" class="quarto-figure quarto-figure-center" width="720"></p>
-<figcaption>Violin plot explaining the distribution of calories per visit by restaurant.</figcaption>
+<figcaption>Violin plot explaining the distribution of calories per visit by outlet.</figcaption>
 </figure>
 </div>
 </div>
@@ -415,15 +409,15 @@ Team Algo Aces- Sai Navya Reddy Busireddy, Gowtham Theeda, Tanya Evita George, V
 <div class="quarto-figure quarto-figure-center">
 <figure>
 <p><img data-src="images/output3q2.png" width="700"></p>
-<figcaption>Violin Plot depicting the Protein-Fat Ratio for each restaurant.</figcaption>
+<figcaption>Half Violin Plot depicting the Protein-Fat Ratio for each outlet.</figcaption>
 </figure>
 </div>
 </div>
 <div id="tabset-2-2">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/output4q2(corrected).png" width="700"></p>
-<figcaption>Scatter Plot depicting the Protein-Fat ratio for each restaurant.</figcaption>
+<p><img data-src="images/output4q2(corrected).png" width="650"></p>
+<figcaption>Scatter Plot depicting the Protein-Fat ratio for each outlet.</figcaption>
 </figure>
 </div>
 </div>
@@ -434,17 +428,18 @@ Team Algo Aces- Sai Navya Reddy Busireddy, Gowtham Theeda, Tanya Evita George, V
 <h2>Insights</h2>
 <div id="smallerTxt">
 <ul>
-<li>Content</li>
+<li>Plot A (Half violin plot) represents the density distribution of protein to fat ratio of all items throughout the outlets. The medians have been considered as the overall protein to fat ratio in an item consumed per visit to an outlet.</li>
+<li>Plot B (Scatter plot) extends the analysis on the results of plot A by showing the median values and categorizing them into - RED &amp; GREEN regions.</li>
+<li>Outlets in RED region (ratio 0-0.4) fall in the low protein high fat category whereas the ones in GREEN region (ratio 0.4-0.5) fall in High protein low fat category indicating healthier food supply.</li>
 </ul>
 </div>
 </section></section>
 <section id="conclusions" class="title-slide slide level1 center">
 <h1>Conclusions:</h1>
 <ul>
-<li>On an average visit from the list of 8 outlets- Sonic, Arbys and Burger King have proved to have the most calories in that respective order.<br>
-</li>
-<li>Chick Fil-a and Subway have shown to have the largest protein-fat ratios.</li>
-<li>Taco Bell, Sonic, Dairy Queen and Burger King have insignifact differences in their protein-fat ratios.</li>
+<li>Chick Fil-A has the lowest calorie count (390) per visit which is suitable for people who are health-concious and follow a strict diet.</li>
+<li>Out of all the outlets, Chick Fil-A and Subway have been shown to have a high protein constitution and are considered healthy.</li>
+<li>According to the health metric, the remaining 6 outlets could improve the protein content in their food items in order to be a considered as a healthy option.</li>
 </ul>
 </section>
 
@@ -453,14 +448,14 @@ Team Algo Aces- Sai Navya Reddy Busireddy, Gowtham Theeda, Tanya Evita George, V
 <h1>Limitations:</h1>
 <div id="smallerTxt">
 <ul>
-<li>The nature of the spread of the data made the mean unsuitable for analytical purposes, as a result, the median was used</li>
-<li>There were no meal combos for the food items in the data set. This would have made the analytical process a much simpler one.</li>
+<li>The nature of the spread of the data made the mean unsuitable for analytical purposes, as a result, the median was used.</li>
+<li>There were no meal combos for the food items in the data set. This would have made the analysis more significant.</li>
 <li>There were no sales information on the food items in the data set. This restricted our findings solely to health and nothing about the economical aspect.</li>
-<li>The definition of what the health metric should be based on the dataset provided was made difficult. A special health metric was generated based on our analysis for this project.</li>
+<li>The definition of what the health metric should be based on the dataset provided was made difficult. The health metric created is restricted to the values we obtained from the results of our plots.</li>
 </ul>
 </div>
 </section>
-<section id="section-2" class="slide level2">
+<section id="section-1" class="slide level2">
 <h2></h2>
 
 

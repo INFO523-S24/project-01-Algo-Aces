@@ -109,7 +109,7 @@
     "href": "presentation.html#plots-for-question-1",
     "title": "Analysis of Fast Food Calories",
     "section": "Plots for question 1:",
-    "text": "Plots for question 1:\n\nPlot APlot B\n\n\n\n\n\nViolin plot explaining the distribution of calories per visit by restaurant.\n\n\n\n\n\n\n\nThe plot shows the count (median) of calories consumed by an individual per visit."
+    "text": "Plots for question 1:\n\nPlot APlot B\n\n\n\n\n\nViolin plot explaining the distribution of calories per visit by outlet.\n\n\n\n\n\n\n\nThe plot shows the count (median) of calories consumed by an individual per visit."
   },
   {
     "objectID": "presentation.html#question-2",
@@ -123,7 +123,7 @@
     "href": "presentation.html#plots-for-question-2",
     "title": "Analysis of Fast Food Calories",
     "section": "Plots for question 2:",
-    "text": "Plots for question 2:\n\nPlot APlot B\n\n\n\n\n\nViolin Plot depicting the Protein-Fat Ratio for each restaurant.\n\n\n\n\n\n\n\nScatter Plot depicting the Protein-Fat ratio for each restaurant."
+    "text": "Plots for question 2:\n\nPlot APlot B\n\n\n\n\n\nHalf Violin Plot depicting the Protein-Fat Ratio for each outlet.\n\n\n\n\n\n\n\nScatter Plot depicting the Protein-Fat ratio for each outlet."
   },
   {
     "objectID": "presentation.html#insights",
@@ -137,7 +137,7 @@
     "href": "presentation.html#insights-1",
     "title": "Analysis of Fast Food Calories",
     "section": "Insights",
-    "text": "Insights\n\n\nContent"
+    "text": "Insights\n\n\nPlot A (Half violin plot) represents the density distribution of protein to fat ratio of all items throughout the outlets. The medians have been considered as the overall protein to fat ratio in an item consumed per visit to an outlet.\nPlot B (Scatter plot) extends the analysis on the results of plot A by showing the median values and categorizing them into - RED & GREEN regions.\nOutlets in RED region (ratio 0-0.4) fall in the low protein high fat category whereas the ones in GREEN region (ratio 0.4-0.5) fall in High protein low fat category indicating healthier food supply."
   },
   {
     "objectID": "presentation.html#section-2",
