@@ -118,12 +118,6 @@ penguins = sns.load_dataset('penguins').dropna()
 
 :::
 
-:::
-
-# Challenges faced:
--   Content.
-
-
 # Conclusion
 
 -   On an average visit from the list of 8 outlets- Sonic, Arbys and Burger King have proved to have the most calories in that respective order.  
