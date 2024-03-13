@@ -67,7 +67,7 @@ All the variables with the exception of the restaurant variable are numerical.
 
 `cholesterol`: The amount of cholesterol in the food item
 
-Output of the analysis: -
+Output of the analysis:
 
 `Summary table`:
 
