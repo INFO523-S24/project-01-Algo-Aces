@@ -11,6 +11,15 @@ jupyter: python3
 
 ### Abstract
 
+This study explores how protein-fat ratios differ between meal categories and whether they meet a certain health standard, as well as the calorie consumption for each visit to various fast food establishments. The data wrangling involved the creation of “protein_calories” and “categorised_food_items” columns in the dataset. Statistical techniques are used to provide thorough summaries of calorie content per each restaurant. Visualizations such as violin plots and line graphs display the distribution and median calorie consumption per individual, allowing for more in-depth analysis. Furthermore, the project examines the protein-fat ratios of different food items and compares them against established health standard. Items are categorized as either healthy or unhealthy depending on their protein-to-fat ratio. The use of half-violin and scatter plots clarifies the distribution and median protein-fat ratio among restaurant menus, providing a comprehensive knowledge of nutritional distributions. The summary data table based on protein-fat ratio provides further insights into the nutritional composition of menu items.
+
+Insights into the calorie and protein_fat ratios enable consumers to make educated dietary choices by giving information about the nutritional profiles of fast-food options. Furthermore, it provides useful assistance for politicians and public health advocates in developing ways to address diet-related health issues. These findings contribute to the common goal of better service by encouraging responsibility in the fast-food business and furthering nutrition science.
+
+Limitations:
+1)	The reason to choose median over mean to calculate average calories is because the provided data from the dataset is skewed and there is an asymmetrical distribution of the data for the variables. The data also contains outliers which can affect the mean value but not the median.
+2)	The definition of what the health metric should be based on the dataset provided was made difficult. A special health metric was generated based on our analysis for this project.
+
+
 #### Introduction
 
 #### Introducing the dataset
@@ -124,7 +133,9 @@ plt.grid(False)
 
 #### Discussion
 
-The distribution of calorie consumption per visit across various fast-food restaurants is illustrated by the visualization of a violin plot. The width of each "violin" in the violin plot, corresponds to the density of observations at various calorie levels. Each violin's quartiles provide information on the data's central tendency and distribution, aiding in the understanding of the variability in calorie counts among restaurants. A summary table is printed, which includes information such as mean, standard deviation, minimum, 25th percentile, median (50th percentile), 75th percentile, and maximum calorie counts. This mix of graphic and numerical statistics offers a thorough picture of calorie consumption patterns across different fast-food businesses. The second visualization presents a line plot featuring inverted triangle marker, where each restaurant median calorie is symbolized by a marker. Horizontally positioned according to restaurant names and vertically aligned based on the average calorie count per visit, the plot enables us to discern that certain restaurants boast notably higher median calorie counts. This highlights the substantial variation in the nutritional profiles of meals served at different fast-food establishments. Some restaurants exhibit consistent calorie counts across visits, while others demonstrate greater variability, indicative of a broader selection of food options with varying calorie content.
+The distribution of calorie consumption per visit across various fast-food restaurants is illustrated by the visualization of a violin plot. The width of each "violin" in the violin plot, corresponds to the density of observations at various calorie levels. Each violin's quartiles provide information on the data's central tendency and distribution, aiding in the understanding of the variability in calorie counts among restaurants. A summary table is printed, which includes information such as mean, standard deviation, minimum, 25th percentile, median (50th percentile), 75th percentile, and maximum calorie counts. This mix of graphic and numerical statistics offers a thorough picture of calorie consumption patterns across different fast-food businesses. 
+
+The second visualization presents a line plot featuring inverted triangle marker, where each restaurant median calorie is symbolized by a marker. Horizontally positioned according to restaurant names and vertically aligned based on the average calorie count per visit, the plot enables us to discern that certain restaurants boast notably higher median calorie counts. Based on the visualizations presented, it is evident that customers of Chick-fil-A tend to consume the lowest calorie intake per visit, averaging 390 calories, while Sonic customers exhibit the highest calorie consumption per visit, averaging 570 calories. This highlights the substantial variation in the nutritional profiles of meals served at different fast-food establishments. Some restaurants exhibit consistent calorie counts across visits, while others demonstrate greater variability, indicative of a broader selection of food options with varying calorie content.
 
 #### Question 2
 
@@ -136,7 +147,7 @@ The goal of this question is to examine the wide range of protein-fat ratios see
 
 #### Approach
 
-For question 2, we'll use the "protein" and "item" variables. To standardize the proteins and fats we'll convert them to calories. By employing the protein-fat ratio, we established a health metric to classify food items as healthy or unhealthy. We have used a half-violin plot to visualize these findings. The half-violin plot is particularly helpful since it demonstrates the distribution of our data while simultaneously indicating its symmetry. The shape of the plot gives us insight into the density of our data, which helps us comprehend the distribution of our health metrics. We have also used a scatter plot to visualize the median protein-fat ratio of each restaurant. Using these Scatter plots provides a clear visual representation of the data points' dispersion. The summary statistics table for the menu items offered by each of these eateries was found based on the protein-fat ratio.
+For question 2, we'll use the "protein" and "item" variables. To standardize the proteins and fats we'll convert them to calories. By employing the protein-fat ratio, we established a health metric to classify food items as healthy or unhealthy. We have used a half-violin plot to visualize these findings. The half-violin plot is particularly helpful since it demonstrates the distribution of our data while simultaneously indicating its symmetry. The shape of the plot gives us insight into the density of our data, which helps us comprehend the distribution of our health metrics. We have also used a line plot with a circle marker to visualize the median protein-fat ratio of each restaurant. Using these Scatter plots provides a clear visual representation of the data points' dispersion. The summary statistics table for the menu items offered by each of these eateries was found based on the protein-fat ratio.
 
 #### Analysis
 
@@ -196,7 +207,7 @@ plt.show()
 
 ```
 
-The table below represents the health metric for the fast food restaurants based on the protein fat ratio.
+The plot below represents the health metric for the fast food restaurants based on the protein fat ratio.
 
 ```{python}
 #| message: false
@@ -241,7 +252,7 @@ plt.show()
 
 ```
 
-The code chunk below represents the summary statistics of the food categories of the data set using the protein fat ratio
+The table below represents the summary statistics of the food categories of the data set using the protein fat ratio
 
 ```{python}
 #| message: false
@@ -293,4 +304,10 @@ summary_stats.describe( )
 
 #### Discussion 
 
-The half-violin plot depicts how the protein-fat ratio varies between fast-food outlets. The numbers near quartile lines inside the violin plots show each restaurant's median protein-fat ratio. The quartile line range provides information on the nutritional markup of their menu items. Some restaurants have narrower distributions, indicating less protein-fat ratios in those quartile distributions, while others have larger distributions, implying more protein-fat ratio in the quartile ranges. The line plot with a circle marker depicts the protein-fat ratios of several fast-food establishments. Each point in the diagram represents a restaurant, with the placement determined by the protein-fat ratio. The shaded regions determine the threshold for classifying restaurants as either "Needs Improvement" or "Healthy" based on their protein-fat ratios. Restaurants classified in the "Needs Improvement" category suggest that their menu options are characterized by a higher proportion of fat relative to protein. Conversely, eateries placed in the "Healthy" category indicate a more favorable protein-to-fat ratio, implying a healthier balance in their menu offerings. For the summary statistics table the food items were categorized into 8 main categories, burgers, chicken nuggets/ tenders, chicken sandwiches, hotdogs, other, salads, subway items, and tacos and burritos, these categorizations were done using a dictionary. A dictionary was created for each food category containing certain words distinct to each food category. Based on the words in the dictionary for each food category, if a word in the food item can be found in the food category dictionary, the food item will be categorized as such.
+The half-violin plot depicts how the protein-fat ratio varies between fast-food outlets. The numbers near quartile lines inside the violin plots show each restaurant's median protein-fat ratio. The quartile line range provides information on the nutritional markup of their menu items. Some restaurants have narrower distributions, indicating less protein-fat ratios in those quartile distributions, while others have larger distributions, implying more protein-fat ratio in the quartile ranges. 
+
+The line plot with a circle marker depicts the protein-fat ratios of several fast-food establishments. Each point in the diagram represents a restaurant, with the placement determined by the protein-fat ratio. The shaded regions determine the threshold for classifying restaurants as either "Needs Improvement" or "Healthy" based on their protein-fat ratios. Restaurants classified in the "Needs Improvement" category suggest that their menu options are characterized by a higher proportion of fat relative to protein. Conversely, eateries placed in the "Healthy" category indicate a more favorable protein-to-fat ratio, implying a healthier balance in their menu offerings. 
+
+For the summary statistics table the food items were categorized into 8 main categories, burgers, chicken nuggets/ tenders, chicken sandwiches, hotdogs, other, salads, subway items, and tacos and burritos, these categorizations were done using a dictionary. A dictionary was created for each food category containing certain words distinct to each food category. Based on the words in the dictionary for each food category, if a word in the food item can be found in the food category dictionary, the food item will be categorized as such. 
+
+These findings and statistics can mainly aid eateries improve their food quality and customer satisfaction.
