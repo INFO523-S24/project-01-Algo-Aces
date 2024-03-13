@@ -4,7 +4,7 @@ subtitle: "INFO 523 - Project 1"
 author: "Algo Aces"
 format:
   html: 
-    code-fold: true
+      code-fold: true
 editor: visual
 jupyter: python3
 ---
@@ -75,6 +75,7 @@ print("Summary Table:")
 summary_table.describe( )
 
 ```
+
 Part 2
 
 ```{python}
@@ -102,9 +103,9 @@ for i, restaurant in enumerate(median_calories['restaurant']):
     plt.text(restaurant, median_calories.loc[i, 'calories'] - 15, f"{median_calories.loc[i, 'calories']:.0f}", ha='center', fontsize=10, color='black')
 
 # Add title and labels
-plt.title('Average Calories per visit to a Restaurant', fontsize=16)
-plt.xlabel('Restaurant', fontsize=14)
-plt.ylabel('Average Calories per visit', fontsize=14)
+plt.title('Calories per visit to a Restaurant',fontweight='bold')
+plt.xlabel('Restaurant', fontweight='bold')
+plt.ylabel('Calories per visit', fontweight='bold')
 
 # Rotate x-axis labels for better readability (optional)
 plt.xticks(rotation=45, ha='right')
@@ -120,12 +121,10 @@ plt.grid(False)
 
 
 ```
+
 #### Discussion
-The distribution of calorie consumption per visit across various fast-food restaurants is illustrated by the visualization of a violin plot. The width of each "violin" in the violin plot, corresponds to the density of observations at various calorie levels. Each violin's quartiles provide information on the data's central tendency and distribution, aiding in the understanding of the variability in calorie counts among restaurants. A summary table is printed, which includes information such as mean, standard deviation, minimum, 25th percentile, median (50th percentile), 75th percentile, and maximum calorie counts. This mix of graphic and numerical statistics offers a thorough picture of calorie consumption patterns across different fast-food businesses. 
-The second visualization presents a line plot featuring inverted triangles, where each restaurant is symbolized by a marker. Horizontally positioned according to restaurant names and vertically aligned based on the average calorie count per visit, the plot enables us to discern that certain restaurants boast notably higher median calorie counts. This highlights the substantial variation in the nutritional profiles of meals served at different fast-food establishments. Some restaurants exhibit consistent calorie counts across visits, while others demonstrate greater variability, indicative of a broader selection of food options with varying calorie content.
 
-
-
+The distribution of calorie consumption per visit across various fast-food restaurants is illustrated by the visualization of a violin plot. The width of each "violin" in the violin plot, corresponds to the density of observations at various calorie levels. Each violin's quartiles provide information on the data's central tendency and distribution, aiding in the understanding of the variability in calorie counts among restaurants. A summary table is printed, which includes information such as mean, standard deviation, minimum, 25th percentile, median (50th percentile), 75th percentile, and maximum calorie counts. This mix of graphic and numerical statistics offers a thorough picture of calorie consumption patterns across different fast-food businesses. The second visualization presents a line plot featuring inverted triangle marker, where each restaurant median calorie is symbolized by a marker. Horizontally positioned according to restaurant names and vertically aligned based on the average calorie count per visit, the plot enables us to discern that certain restaurants boast notably higher median calorie counts. This highlights the substantial variation in the nutritional profiles of meals served at different fast-food establishments. Some restaurants exhibit consistent calorie counts across visits, while others demonstrate greater variability, indicative of a broader selection of food options with varying calorie content.
 
 #### Question 2
 
@@ -183,12 +182,12 @@ for i in range(len(median_protein_fat_ratio)):
     plt.text(median_protein_fat_ratio['Protein_fat_ratio'][i], i, f"{median_protein_fat_ratio['Protein_fat_ratio'][i]:.2f}", fontsize=10, va='center', ha='right', color='black')
 
 # Add title and labels
-plt.title('Protein-Fat Ratio by Restaurant', fontsize=16)
-plt.xlabel('Protein-Fat Ratio', fontsize=14)
-plt.ylabel('Restaurant', fontsize=14)
+plt.title('Protein-Fat Ratio by Restaurant', fontweight='bold')
+plt.xlabel('Protein-Fat Ratio', fontweight='bold')
+plt.ylabel('Restaurant', fontweight='bold')
 
 # Customize y-axis labels
-plt.yticks(fontsize=12)
+#plt.yticks(fontsize=12)
 
 # Show the plot
 plt.grid(True, linestyle='--', alpha=0.7)
@@ -216,16 +215,17 @@ plt.figure(figsize=(10, 6))
 
 # Plot points for protein fat ratios for each restaurant
 for i, restaurant in enumerate(restaurants):
-    plt.scatter([protein_fat_ratios[i]], [restaurant], label=restaurant, marker='o')
+    plt.scatter([protein_fat_ratios[i]], [restaurant], marker='o')
 
 # Shade the regions
 plt.axvspan(0.25, 0.40, color='lightcoral', alpha=0.5, label='Needs Improvement')
 plt.axvspan(0.40, 0.50, color='lightgreen', alpha=0.5, label='Healthy')
 
-# Labels and legend
-plt.xlabel('Protein Fat Ratio')
-plt.ylabel('Restaurants')
-plt.title('Protein Fat Ratio of Restaurants')
+# Labels and legend for shaded regions
+plt.xlabel('Protein Fat Ratio', fontweight='bold')
+plt.ylabel('Restaurants', fontweight='bold')
+plt.title('Protein Fat Ratio of Restaurants', fontweight='bold')
+plt.legend()
 
 # Customize y-axis labels
 plt.yticks(restaurants)
@@ -233,8 +233,8 @@ plt.yticks(restaurants)
 # Show plot
 plt.grid(True, linestyle='--', alpha=0.7)
 plt.tight_layout()
-#plt.legend()
 plt.show()
+
 
 
 
@@ -290,6 +290,7 @@ summary_stats = calories_df.groupby('categorized_food_items')['Protein_fat_ratio
 summary_stats.describe( )
 
 ```
-###Discussion
-The half-violin plot depicts how the protein-fat ratio varies between fast-food outlets. The numbers near quartile lines inside the violin plots show each restaurant's median protein-fat ratio. The quartile line range provides information on the nutritional markup of their menu items. Some restaurants have narrower distributions, indicating less protein-fat ratios in those quartile distributions, while others have larger distributions, implying more protein-fat ratio in the quartile ranges. The line plot with a circle marker depicts the protein-fat ratios of several fast-food establishments. Each point in the diagram represents a restaurant, with the placement determined by the protein-fat ratio. The shaded regions determine the threshold for classifying restaurants as either "Needs Improvement" or "Healthy" based on their protein-fat ratios. Restaurants classified in the "Needs Improvement" category suggest that their menu options are characterized by a higher proportion of fat relative to protein. Conversely, eateries placed in the "Healthy" category indicate a more favorable protein-to-fat ratio, implying a healthier balance in their menu offerings. For the summary statistics table the food items were categorized into 8 main categories, burgers, chicken nuggets/ tenders, chicken sandwiches, hotdogs, other, salads, subway items, and tacos and burritos, these categorizations were done using a dictionary. A dictionary was created for each food category containing certain words distinct to each food category. Based on the words in the dictionary for each food category, if a word in the food item can be found in the food category dictionary, the food item will be categorized as such.
 
+#### Discussion 
+
+The half-violin plot depicts how the protein-fat ratio varies between fast-food outlets. The numbers near quartile lines inside the violin plots show each restaurant's median protein-fat ratio. The quartile line range provides information on the nutritional markup of their menu items. Some restaurants have narrower distributions, indicating less protein-fat ratios in those quartile distributions, while others have larger distributions, implying more protein-fat ratio in the quartile ranges. The line plot with a circle marker depicts the protein-fat ratios of several fast-food establishments. Each point in the diagram represents a restaurant, with the placement determined by the protein-fat ratio. The shaded regions determine the threshold for classifying restaurants as either "Needs Improvement" or "Healthy" based on their protein-fat ratios. Restaurants classified in the "Needs Improvement" category suggest that their menu options are characterized by a higher proportion of fat relative to protein. Conversely, eateries placed in the "Healthy" category indicate a more favorable protein-to-fat ratio, implying a healthier balance in their menu offerings. For the summary statistics table the food items were categorized into 8 main categories, burgers, chicken nuggets/ tenders, chicken sandwiches, hotdogs, other, salads, subway items, and tacos and burritos, these categorizations were done using a dictionary. A dictionary was created for each food category containing certain words distinct to each food category. Based on the words in the dictionary for each food category, if a word in the food item can be found in the food category dictionary, the food item will be categorized as such.

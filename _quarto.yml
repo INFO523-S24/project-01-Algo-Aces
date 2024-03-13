@@ -15,7 +15,9 @@ website:
       - text: Presentation
         href: presentation.qmd
       - text: About
-        href: about.qmd   
+        href: about.qmd
+    logo: images\AlgoAces-logo.webp
+  favicon: images\AlgoAces-logo.webp    
 
 format:
   html:
