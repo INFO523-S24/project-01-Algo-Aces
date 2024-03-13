@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.4.549">
 
   <meta name="author" content="Team Algo Aces- Sai Navya Reddy Busireddy, Gowtham Theeda, Tanya Evita George, Valerie Okine, Monica Tejaswi Kommareddy">
-  <title>Project Title - Fast Food Calories</title>
+  <title>Analysis of Food Calories - Analysis of Fast Food Calories</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -326,7 +326,7 @@
     <div class="slides">
 
 <section id="title-slide" data-background-image="images/coverimg2.jpg" data-background-opacity="0.7" data-background-size="stretch" data-slide-number="none" class="quarto-title-block center">
-  <h1 class="title">Fast Food Calories</h1>
+  <h1 class="title">Analysis of Fast Food Calories</h1>
   <p class="subtitle">INFO 523 - Spring 2023 - Project 1</p>
 
 <div class="quarto-title-authors">
@@ -343,20 +343,29 @@ Team Algo Aces- Sai Navya Reddy Busireddy, Gowtham Theeda, Tanya Evita George, V
 
 </section>
 
-<section>
 <section id="section" class="title-slide slide level1 center">
 <h1></h1>
 <ul>
-<li>It consists of 18 variables that elaborate on the nutritional compostion of different fast food items.</li>
-<li>Data has been collected from 8 different fast-food outlets.</li>
-<li>Overall, the dataset gives a precise and clear outlook of how healthy or how harmful a certain food item can be for consumption.</li>
-<li>Few of the main variables made use of in this project from the dataset are- ‘total_fat’, ‘calories’, ‘cholestrol’, ’protein.</li>
+<li>The dataset provides information on the nutritional composition of different fast food items as well as their respective calorie counts across 8 outlets- Arbys, Burger King, Chick Fil-A, Dairy Queen, McDonalds, Sonic, Subway and Taco Bell.<br>
+</li>
+<li>Nutritional data, including calories, total fat, saturated fat, cholesterol, sodium, carbs, fiber, sugars, and protein, are included with every item in the dataset to give a thorough picture of the nutritional makeup of each food item.</li>
+</ul>
+</section>
+
+<section>
+<section id="section-1" class="title-slide slide level1 center">
+<h1></h1>
+<ul>
+<li>It contains a variety of meal components, such as sides and main courses. This makes it possible to analyze both individual foods and possible combos to produce meals with certain nutritional profiles.<br>
+</li>
+<li>Few of the main variables made use of in this project from the dataset are- ‘total_fat’, ‘calories’, ‘protein’and&nbsp;’cal_fat’.</li>
+<li>The variety of food items available meets the dietary requirements and tastes of a broad spectrum of customers.</li>
 </ul>
 </section>
 <section id="question-1" class="slide level2">
 <h2>Question 1:</h2>
 <p>‎</p>
-<h3 id="how-many-calories-are-consumed-on-average-per-visit-to-each-restaurant-or-outlet">How many calories are consumed on average per visit to each restaurant or outlet?</h3>
+<h3 id="how-many-calories-does-an-individual-consume-per-visit-in-a-fast-food-outlet">How many calories does an individual consume per visit in a fast-food outlet?</h3>
 </section>
 <section id="plots-for-question-1" class="slide level2">
 <h2>Plots for question 1:</h2>
@@ -374,8 +383,8 @@ Team Algo Aces- Sai Navya Reddy Busireddy, Gowtham Theeda, Tanya Evita George, V
 <div id="tabset-1-2">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/output2q1.png" class="quarto-figure quarto-figure-center" width="610"></p>
-<figcaption>The plot shows the average count of calories consumed by an individual per visit to a restaurant.</figcaption>
+<p><img data-src="images/output2q1(corrected).png" class="quarto-figure quarto-figure-center" width="610"></p>
+<figcaption>The plot shows the count (median) of calories consumed by an individual per visit.</figcaption>
 </figure>
 </div>
 </div>
@@ -386,7 +395,9 @@ Team Algo Aces- Sai Navya Reddy Busireddy, Gowtham Theeda, Tanya Evita George, V
 <h2>Insights</h2>
 <div id="smallerTxt">
 <ul>
-<li>Content</li>
+<li>Plot A (Violin Plot) represents the density distribution of calorie count through various outlets. It also shows the median values of each of the distribution.</li>
+<li>Plot B (Scatter Plot) provides a lucid visualization of the results of plot A, considering the median values to be the central measure of calorie count per visit to an outlet.</li>
+<li>From the Plots A &amp; B we can infer that Chick Fil-A has the lowest calorie count per visit with a value of 390 cal. Hence it is the better option of all outlets, especially for calorie conscious customers.</li>
 </ul>
 </div>
 </section>
@@ -411,7 +422,7 @@ Team Algo Aces- Sai Navya Reddy Busireddy, Gowtham Theeda, Tanya Evita George, V
 <div id="tabset-2-2">
 <div class="quarto-figure quarto-figure-center">
 <figure>
-<p><img data-src="images/output4q2.png" width="700"></p>
+<p><img data-src="images/output4q2(corrected).png" width="700"></p>
 <figcaption>Scatter Plot depicting the Protein-Fat ratio for each restaurant.</figcaption>
 </figure>
 </div>
@@ -427,8 +438,8 @@ Team Algo Aces- Sai Navya Reddy Busireddy, Gowtham Theeda, Tanya Evita George, V
 </ul>
 </div>
 </section></section>
-<section id="conclusion" class="title-slide slide level1 center">
-<h1>Conclusion</h1>
+<section id="conclusions" class="title-slide slide level1 center">
+<h1>Conclusions:</h1>
 <ul>
 <li>On an average visit from the list of 8 outlets- Sonic, Arbys and Burger King have proved to have the most calories in that respective order.<br>
 </li>
@@ -440,327 +451,20 @@ Team Algo Aces- Sai Navya Reddy Busireddy, Gowtham Theeda, Tanya Evita George, V
 <section>
 <section id="limitations" class="title-slide slide level1 center">
 <h1>Limitations:</h1>
+<div id="smallerTxt">
 <ul>
-<li>Content.</li>
+<li>The nature of the spread of the data made the mean unsuitable for analytical purposes, as a result, the median was used</li>
+<li>There were no meal combos for the food items in the data set. This would have made the analytical process a much simpler one.</li>
+<li>There were no sales information on the food items in the data set. This restricted our findings solely to health and nothing about the economical aspect.</li>
+<li>The definition of what the health metric should be based on the dataset provided was made difficult. A special health metric was generated based on our analysis for this project.</li>
 </ul>
+</div>
 </section>
-<section id="section-1" class="slide level2">
+<section id="section-2" class="slide level2">
 <h2></h2>
 
-<img data-src="images/thanksimg1.gif" class="quarto-figure quarto-figure-center r-stretch"></section>
-<section id="code" class="slide level2">
-<h2>Code</h2>
-<div id="c368124c" class="cell" data-execution_count="4">
-<div class="cell-output cell-output-stdout">
-<pre><code>                            OLS Regression Results                            
-==============================================================================
-Dep. Variable:                    mpg   R-squared:                       0.073
-Model:                            OLS   Adj. R-squared:                  0.070
-Method:                 Least Squares   F-statistic:                     30.59
-Date:                Tue, 12 Mar 2024   Prob (F-statistic):           5.84e-08
-Time:                        22:29:32   Log-Likelihood:                -1346.4
-No. Observations:                 392   AIC:                             2697.
-Df Residuals:                     390   BIC:                             2705.
-Df Model:                           1                                         
-Covariance Type:            nonrobust                                         
-==============================================================================
-                 coef    std err          t      P&gt;|t|      [0.025      0.975]
-------------------------------------------------------------------------------
-const         35.8015      2.266     15.800      0.000      31.347      40.257
-speed       -354.7055     64.129     -5.531      0.000    -480.788    -228.623
-==============================================================================
-Omnibus:                       27.687   Durbin-Watson:                   0.589
-Prob(Omnibus):                  0.000   Jarque-Bera (JB):               18.976
-Skew:                           0.420   Prob(JB):                     7.57e-05
-Kurtosis:                       2.323   Cond. No.                         169.
-==============================================================================
 
-Notes:
-[1] Standard Errors assume that the covariance matrix of the errors is correctly specified.</code></pre>
-</div>
-</div>
-</section>
-<section id="plots" class="slide level2">
-<h2>Plots</h2>
-
-<img data-src="presentation_files/figure-revealjs/cell-6-output-1.png" class="r-stretch"></section>
-<section id="plot-and-text" class="slide level2">
-<h2>Plot and text</h2>
-<div class="columns">
-<div class="column" style="width:50%;">
-<ul>
-<li><p>Some text</p></li>
-<li><p>goes here</p></li>
-</ul>
-</div><div class="column" style="width:50%;">
-<div id="ce6151e1" class="cell" data-fig.width="5.5" data-execution_count="6">
-<div class="cell-output cell-output-display">
-<div>
-<figure>
-<p><img data-src="presentation_files/figure-revealjs/cell-7-output-1.png"></p>
-</figure>
-</div>
-</div>
-</div>
-</div>
-</div>
-</section></section>
-<section>
-<section id="a-new-section" class="title-slide slide level1 center">
-<h1>A new section…</h1>
-
-</section>
-<section id="tables" class="slide level2">
-<h2>Tables</h2>
-<p>If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,</p>
-<div id="4bd29fc3" class="cell" data-execution_count="7">
-<div class="cell-output cell-output-display" data-execution_count="28">
-<table border="1" class="dataframe">
-
-<thead>
-
-<tr style="text-align: right;">
-
-<th>
-</th>
-
-<th>
-species
-</th>
-
-<th>
-island
-</th>
-
-<th>
-bill_length_mm
-</th>
-
-<th>
-bill_depth_mm
-</th>
-
-<th>
-flipper_length_mm
-</th>
-
-<th>
-body_mass_g
-</th>
-
-<th>
-sex
-</th>
-
-</tr>
-
-</thead>
-
-<tbody>
-
-<tr>
-
-<th>
-0
-</th>
-
-<td>
-Adelie
-</td>
-
-<td>
-Torgersen
-</td>
-
-<td>
-39.1
-</td>
-
-<td>
-18.7
-</td>
-
-<td>
-181.0
-</td>
-
-<td>
-3750.0
-</td>
-
-<td>
-Male
-</td>
-
-</tr>
-
-<tr>
-
-<th>
-1
-</th>
-
-<td>
-Adelie
-</td>
-
-<td>
-Torgersen
-</td>
-
-<td>
-39.5
-</td>
-
-<td>
-17.4
-</td>
-
-<td>
-186.0
-</td>
-
-<td>
-3800.0
-</td>
-
-<td>
-Female
-</td>
-
-</tr>
-
-<tr>
-
-<th>
-2
-</th>
-
-<td>
-Adelie
-</td>
-
-<td>
-Torgersen
-</td>
-
-<td>
-40.3
-</td>
-
-<td>
-18.0
-</td>
-
-<td>
-195.0
-</td>
-
-<td>
-3250.0
-</td>
-
-<td>
-Female
-</td>
-
-</tr>
-
-<tr>
-
-<th>
-4
-</th>
-
-<td>
-Adelie
-</td>
-
-<td>
-Torgersen
-</td>
-
-<td>
-36.7
-</td>
-
-<td>
-19.3
-</td>
-
-<td>
-193.0
-</td>
-
-<td>
-3450.0
-</td>
-
-<td>
-Female
-</td>
-
-</tr>
-
-<tr>
-
-<th>
-5
-</th>
-
-<td>
-Adelie
-</td>
-
-<td>
-Torgersen
-</td>
-
-<td>
-39.3
-</td>
-
-<td>
-20.6
-</td>
-
-<td>
-190.0
-</td>
-
-<td>
-3650.0
-</td>
-
-<td>
-Male
-</td>
-
-</tr>
-
-</tbody>
-
-</table>
-</div>
-</div>
-</section>
-<section id="images" class="slide level2">
-<h2>Images</h2>
-
-<img data-src="images/watercolour_sys02_img34_teacup-ocean.png" class="quarto-figure quarto-figure-center r-stretch" width="500"><p class="caption">Image credit: Danielle Navarro, Percolate.</p></section>
-<section id="math-expressions" class="slide level2 smaller">
-<h2>Math Expressions</h2>
-<p>You can write LaTeX math expressions inside a pair of dollar signs, e.g.&nbsp;$\alpha+\beta$ renders <span class="math inline">\(\alpha + \beta\)</span>. You can use the display style with double dollar signs:</p>
-<pre><code>$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$</code></pre>
-<p><span class="math display">\[
-\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i
-\]</span></p>
-<p>Limitations:</p>
-<ol type="1">
-<li>The source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting <code>$$</code> must appear in the very beginning of a line, followed immediately by a non-space character, and the ending <code>$$</code> must be at</li>
-</ol>
-
-<div class="quarto-auto-generated-content">
+<img data-src="images/thanksimg1.gif" class="quarto-figure quarto-figure-center r-stretch"><div class="quarto-auto-generated-content">
 <div class="footer footer-default">
 
 </div>

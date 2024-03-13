@@ -1,5 +1,5 @@
 ---
-title: "Fast Food Calories"
+title: "Analysis of Fast Food Calories"
 subtitle: "INFO 523 - Spring 2023 - Project 1"
 author: "Team Algo Aces- Sai Navya Reddy Busireddy, Gowtham Theeda, Tanya Evita George, Valerie Okine, Monica Tejaswi Kommareddy"
 title-slide-attributes:
@@ -62,16 +62,21 @@ penguins = sns.load_dataset('penguins').dropna()
 
 # 
 
--   It consists of 18 variables that elaborate on the nutritional compostion of different fast food items.
--   Data has been collected from 8 different fast-food outlets.
--   Overall, the dataset gives a precise and clear outlook of how healthy or how harmful a certain food item can be for consumption.
--   Few of the main variables made use of in this project from the dataset are- 'total_fat', 'calories', 'cholestrol', 'protein.
+-   The dataset provides information on the nutritional composition of different fast food items as well as their respective calorie counts across 8 outlets- Arbys, Burger King, Chick Fil-A, Dairy Queen, McDonalds, Sonic, Subway and Taco Bell.                                                                    
+-    Nutritional data, including calories, total fat, saturated fat, cholesterol, sodium, carbs, fiber, sugars, and protein, are included with every item in the dataset to give a thorough picture of the nutritional makeup of each food item.                  
+
+#
+
+-    It contains a variety of meal components, such as sides and main courses. This makes it possible to analyze both individual foods and possible combos to produce meals with certain nutritional profiles.                                                                  
+-   Few of the main variables made use of in this project from the dataset are- ‘total_fat’, ‘calories’, 'protein'and 'cal_fat'.
+-   The variety of food items available meets the dietary requirements and tastes of a broad spectrum of customers.
+
 
 ## Question 1:
 
 ‎
 
-### How many calories are consumed on average per visit to each restaurant or outlet?
+### How many calories does an individual consume per visit in a fast-food outlet?
 
 ## Plots for question 1:
 
@@ -83,7 +88,7 @@ penguins = sns.load_dataset('penguins').dropna()
 
 #### Plot B
 
-![The plot shows the average count of calories consumed by an individual per visit to a restaurant.](images/output2q1.png){fig-align="center" width="610"}
+![The plot shows the count (median) of calories consumed by an individual per visit.](images/output2q1(corrected).png){fig-align="center" width="610"}
 
 :::
 
@@ -91,7 +96,9 @@ penguins = sns.load_dataset('penguins').dropna()
 ## Insights
 
 ::: {#smallerTxt}
--   Content
+-   Plot A (Violin Plot) represents the density distribution of calorie count through various outlets. It also shows the median values of each of the distribution. 
+-   Plot B (Scatter Plot) provides a lucid visualization of the results of plot A, considering the median values to be the central measure of calorie count per visit to an outlet.
+-   From the Plots A & B we can infer that Chick Fil-A has the lowest calorie count per visit with a value of 390 cal. Hence it is the better option of all outlets, especially for calorie conscious customers.
 
 :::
 
@@ -111,7 +118,7 @@ penguins = sns.load_dataset('penguins').dropna()
 
 #### Plot B
 
-![Scatter Plot depicting the Protein-Fat ratio for each restaurant.](images/output4q2.png){width="700"}
+![Scatter Plot depicting the Protein-Fat ratio for each restaurant.](images/output4q2(corrected).png){width="700"}
 
 :::
 
@@ -122,94 +129,21 @@ penguins = sns.load_dataset('penguins').dropna()
 
 :::
 
-# Conclusion
+# Conclusions:
 
 -   On an average visit from the list of 8 outlets- Sonic, Arbys and Burger King have proved to have the most calories in that respective order.  
 -   Chick Fil-a and Subway have shown to have the largest protein-fat ratios.
 -   Taco Bell, Sonic, Dairy Queen and Burger King have insignifact differences in their protein-fat ratios.
 
 # Limitations:
--   Content.
+
+:::{#smallerTxt}
+-   The nature of the spread of the data made the mean unsuitable for analytical purposes, as a result, the median was used 
+-   There were no meal combos for the food items in the data set. This would have made the analytical process a much simpler one. 
+-   There were no sales information on the food items in the data set. This restricted our findings solely to health and nothing about the economical aspect.
+-   The definition of what the health metric should be based on the dataset provided was made difficult. A special health metric was generated based on our analysis for this project.
+:::
 
 ## 
 
 ![](images/thanksimg1.gif){fig-align="center"}
-
-
-
-## Code
-
-```{python}
-from sklearn.linear_model import LinearRegression
-import statsmodels.api as sm
-import pandas as pd
-
-# Fit a linear regression model
-X = mtcars[['speed']]
-y = mtcars['mpg']
-model = LinearRegression().fit(X, y)
-
-# Summary of the model
-X2 = sm.add_constant(X)
-est = sm.OLS(y, X2)
-est2 = est.fit()
-print(est2.summary())
-```
-
-## Plots
-
-```{python}
-penguins['species'] = penguins['species'].apply(lambda x: "Adelie" if x == "Adelie" else "Other")
-sns.scatterplot(data=penguins, x='flipper_length_mm', y='body_mass_g', hue='species')
-plt.show()
-```
-
-## Plot and text
-
-::: columns
-::: {.column width="50%"}
--   Some text
-
--   goes here
-:::
-
-::: {.column width="50%"}
-```{python}
-#| warning: false
-#| fig.width: 5.5
-fig, ax = plt.subplots(figsize=(5.5, 5.5 * 0.618))
-sns.boxplot(data=penguins, x='bill_length_mm', y='species', hue='species', ax=ax)
-plt.show()
-```
-:::
-:::
-
-# A new section...
-
-## Tables
-
-If you want to generate a table, make sure it is in the HTML format (instead of Markdown or other formats), e.g.,
-
-```{python}
-penguins.head().to_html()
-```
-
-## Images
-
-![Image credit: Danielle Navarro, Percolate.](images/watercolour_sys02_img34_teacup-ocean.png){fig-align="center" width="500"}
-
-## Math Expressions {.smaller}
-
-You can write LaTeX math expressions inside a pair of dollar signs, e.g. \$\\alpha+\\beta\$ renders $\alpha + \beta$. You can use the display style with double dollar signs:
-
-```         
-$$\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i$$
-```
-
-$$
-\bar{X}=\frac{1}{n}\sum_{i=1}^nX_i
-$$
-
-Limitations:
-
-1.  The source code of a LaTeX math expression must be in one line, unless it is inside a pair of double dollar signs, in which case the starting `$$` must appear in the very beginning of a line, followed immediately by a non-space character, and the ending `$$` must be at 
