@@ -85,14 +85,16 @@ penguins = sns.load_dataset('penguins').dropna()
 
 ![The plot shows the average count of calories consumed by an individual per visit to a restaurant.](images/output2q1.png){fig-align="center" width="610"}
 
-#### Insights
+:::
+
+
+## Insights
 
 ::: {#smallerTxt}
 -   Content
 
 :::
 
-:::
 
 ## Question 2:
 
@@ -111,7 +113,9 @@ penguins = sns.load_dataset('penguins').dropna()
 
 ![Scatter Plot depicting the Protein-Fat ratio for each restaurant.](images/output4q2.png){width="700"}
 
-#### Insights
+:::
+
+## Insights
 
 ::: {#smallerTxt}
 -   Content
@@ -123,6 +127,9 @@ penguins = sns.load_dataset('penguins').dropna()
 -   On an average visit from the list of 8 outlets- Sonic, Arbys and Burger King have proved to have the most calories in that respective order.  
 -   Chick Fil-a and Subway have shown to have the largest protein-fat ratios.
 -   Taco Bell, Sonic, Dairy Queen and Burger King have insignifact differences in their protein-fat ratios.
+
+# Limitations:
+-   Content.
 
 ## 
 

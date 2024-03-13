@@ -16,10 +16,14 @@ website:
         href: presentation.qmd
       - text: About
         href: about.qmd
+    logo: images\AlgoAces-logo.webp
+  favicon: images\AlgoAces-logo.webp    
 
 format:
   html:
     theme: default
+      light: lightly
+      dark: darkly
     toc: true
 
 execute:
