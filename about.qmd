@@ -7,10 +7,12 @@ jupyter: python3
 
 This project was developed by **\[Team Name\]** For [INFO 523 - Data Mining and Discovery](https://datamineaz.org/) at the University of Arizona, taught by Dr. Greg Chism. The team is comprised of the following team members.
 
--   Valerie Naa Dei Okine (First year, Master of Data Science)
+-   Valerie Naa Dei Okine: First year graduate student Data Science at University of Arizona.
 
--   Team member 2: One sentence description of Team member 2 (e.g., year, major, etc.).
+-   Sai Navya Reddy: First year graduate student Data Science at University of Arizona.
 
--   Team member 3: One sentence description of Team member 3 (e.g., year, major, etc.).
+-   Gowtham Theeda: First year graduate student Data Science at University of Arizona.
 
--   Team member 4: One sentence description of Team member 4 (e.g., year, major, etc.).
+-   Tanya Evita George: First year graduate student Data Science at University of Arizona.
+
+-   Monica Tejaswi Kommareddy:First year graduate student Data Science at University of Arizona.
